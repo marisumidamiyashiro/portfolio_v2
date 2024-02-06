@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// VARIABLES
+$light-pink: rgb(247, 218, 218);
+$sand: rgb(209, 181, 173);
+$coffee: rgb(111, 87, 84);
+
+@import "partials/header";
+@import "partials/footer";
