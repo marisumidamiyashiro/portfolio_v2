@@ -9,5 +9,13 @@ $light-pink: rgb(247, 218, 218);
 $sand: rgb(209, 181, 173);
 $coffee: rgb(111, 87, 84);
 
+body {
+    min-height: 100vh;
+    background: linear-gradient(80deg, $coffee, $light-pink);
+}
+
 @import "partials/header";
 @import "partials/footer";
+@import "partials/projectcards";
+@import "partials/structure";
+@import "partials/typography";

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background: linear-gradient(80deg, rgb(111, 87, 84), rgb(247, 218, 218));
+}
+
 nav {
   user-select: none;
 }
@@ -14,12 +19,7 @@ nav li a {
   text-decoration: none;
 }
 
-body {
-  min-height: 100vh;
-  background: linear-gradient(90deg, #d1b5ad, #f7dada);
-}
-
-.site-nav {
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -31,7 +31,11 @@ body {
   z-index: 10;
   padding-top: 15px;
 }
-.site-nav li {
+.site-header .active {
+  color: rgb(111, 87, 84);
+  background-color: rgb(247, 218, 218);
+}
+.site-header .site-nav {
   position: relative;
   display: block;
   width: 180px;
@@ -39,43 +43,37 @@ body {
   font-weight: 700;
   font-style: normal;
 }
-.site-nav li:hover {
-  text-decoration: none;
+.site-header .site-nav li:hover {
   background-color: rgb(247, 218, 218);
 }
-.site-nav li a {
+.site-header .site-nav a {
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: rgb(111, 87, 84);
+  color: rgb(247, 218, 218);
   font-size: 1rem;
   transition: all 0.1s linear;
   padding: 15px 0;
 }
-.site-nav li a:hover {
+.site-header .site-nav a:hover {
   color: rgb(111, 87, 84);
 }
-.site-nav:hover {
-  width: 180px;
-  overflow: visible;
-}
-
-.nav-icon {
+.site-header .site-nav a .nav-icon {
   width: 75px;
   height: 25px;
   font-size: 30px;
   text-align: center;
 }
+.site-header:hover {
+  width: 180px;
+  overflow: visible;
+}
 
 .nav-text {
   width: 100px;
   height: 25px;
-}
-
-.active {
-  color: rgb(111, 87, 84);
-  background-color: rgb(247, 218, 218);
 }
 
 nav {
@@ -145,4 +143,159 @@ nav li a {
 .active {
   color: rgb(111, 87, 84);
   background-color: rgb(247, 218, 218);
+}
+
+.projects {
+  position: relative;
+  display: block;
+  justify-content: center;
+}
+.projects .section-title {
+  display: flex;
+  justify-content: center;
+}
+.projects .work {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 25px;
+}
+.projects .card {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #ccc;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.projects .card .poster {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.projects .card .poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.projects .card .details {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background: rgba(247, 218, 218, 0.9);
+  transition: 0.3s;
+  color: rgb(111, 87, 84);
+  z-index: 2;
+}
+.projects .card .details a {
+  text-decoration: none;
+}
+.projects .card .details h1,
+.projects .card .details h2 {
+  color: #443e44;
+  font-family: helvetica;
+}
+.projects .card .details h1 {
+  font-size: 1.5em;
+  padding: 1em 0.5em 0.5em 0.5em;
+}
+.projects .card .details h2 {
+  font-size: 1em;
+  padding: 0 0.5em 0.25em 0.5em;
+}
+.projects .card .details .desciption {
+  color: rgb(111, 87, 84);
+  opacity: 0.8;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  padding: 0 0 0 1.5em;
+}
+.projects .card .details .tags {
+  background-color: rgb(111, 87, 84);
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.875em;
+  font-size: 0.55em;
+  font-family: new-order, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0.5em;
+}
+.projects .card .details .tags .tag {
+  padding: 1.5em;
+  color: rgb(247, 218, 218);
+}
+
+.poster::before {
+  content: "";
+  position: absolute;
+  bottom: -45%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.card:hover .details {
+  bottom: 0;
+}
+
+.container {
+  max-width: 75vw;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.hero .about {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lucida Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(3em, 15vw, 15em);
+  color: rgba(111, 87, 84, 0.5);
+}
+
+h2 {
+  font-size: clamp(2em, 10vw, 10em);
+  color: rgb(111, 87, 84);
+}
+
+h3 {
+  font-size: clamp(1em, 5vw, 5em);
+  color: rgb(111, 87, 84);
+}
+
+p {
+  width: 25vw;
 }

@@ -1,0 +1,32 @@
+// .hero {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+
+//     .about {
+//         display: block;
+//         justify-content: center;
+//         text-align: center;
+//         align-items: center;
+//     }
+// }
+
+.container {
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .about {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}
