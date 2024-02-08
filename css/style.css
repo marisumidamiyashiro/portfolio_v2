@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  min-height: 100vh;
-  background: linear-gradient(80deg, rgb(111, 87, 84), rgb(247, 218, 218));
-}
-
 nav {
   user-select: none;
 }
@@ -19,23 +14,19 @@ nav li a {
   text-decoration: none;
 }
 
-.site-header {
+.header-nav {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 75px;
   overflow: hidden;
-  background: rgba(111, 87, 84, 0.5);
+  background: rgba(255, 224, 220, 0.5);
   transition: width 0.05s linear;
   z-index: 10;
   padding-top: 15px;
 }
-.site-header .active {
-  color: rgb(111, 87, 84);
-  background-color: rgb(247, 218, 218);
-}
-.site-header .site-nav {
+.header-nav .site-nav {
   position: relative;
   display: block;
   width: 180px;
@@ -43,30 +34,30 @@ nav li a {
   font-weight: 700;
   font-style: normal;
 }
-.site-header .site-nav li:hover {
-  background-color: rgb(247, 218, 218);
+.header-nav .site-nav li:hover {
+  background-color: rgb(250, 187, 187);
 }
-.site-header .site-nav a {
+.header-nav .site-nav a {
   text-decoration: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: rgb(247, 218, 218);
+  color: #F88379;
   font-size: 1rem;
   transition: all 0.1s linear;
   padding: 15px 0;
 }
-.site-header .site-nav a:hover {
-  color: rgb(111, 87, 84);
+.header-nav .site-nav a:hover {
+  color: #F88379;
 }
-.site-header .site-nav a .nav-icon {
+.header-nav .site-nav a .nav-icon {
   width: 75px;
   height: 25px;
   font-size: 30px;
   text-align: center;
 }
-.site-header:hover {
+.header-nav:hover {
   width: 180px;
   overflow: visible;
 }
@@ -76,14 +67,8 @@ nav li a {
   height: 25px;
 }
 
-nav {
-  user-select: none;
-}
-nav li {
-  outline: 0;
-}
-nav li a {
-  text-decoration: none;
+.active {
+  background-color: rgb(250, 187, 187);
 }
 
 .footer-nav {
@@ -108,31 +93,30 @@ nav li a {
 }
 .footer-nav li:hover {
   text-decoration: none;
-  background-color: rgb(247, 218, 218);
+  background-color: rgb(250, 187, 187);
 }
 .footer-nav li a {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: rgb(111, 87, 84);
+  color: rgb(77, 52, 49);
   font-size: 1rem;
   transition: all 0.1s linear;
   padding: 15px 0;
 }
 .footer-nav li a:hover {
-  color: rgb(111, 87, 84);
+  color: rgb(77, 52, 49);
 }
-.footer-nav:hover {
-  width: 180px;
-  overflow: visible;
-}
-
-.nav-icon {
+.footer-nav li a .nav-icon {
   width: 75px;
   height: 25px;
   font-size: 30px;
   text-align: center;
+}
+.footer-nav:hover {
+  width: 180px;
+  overflow: visible;
 }
 
 .nav-text {
@@ -141,8 +125,7 @@ nav li a {
 }
 
 .active {
-  color: rgb(111, 87, 84);
-  background-color: rgb(247, 218, 218);
+  background-color: rgb(250, 187, 187);
 }
 
 .projects {
@@ -195,7 +178,7 @@ nav li a {
   height: 75%;
   background: rgba(247, 218, 218, 0.9);
   transition: 0.3s;
-  color: rgb(111, 87, 84);
+  color: rgb(77, 52, 49);
   z-index: 2;
 }
 .projects .card .details a {
@@ -215,14 +198,16 @@ nav li a {
   padding: 0 0.5em 0.25em 0.5em;
 }
 .projects .card .details .desciption {
-  color: rgb(111, 87, 84);
+  color: rgb(77, 52, 49);
+  font-family: "new-order", sans-serif;
+  font-size: 80%;
+  max-width: 350px;
   opacity: 0.8;
   line-height: 1.5;
-  margin-bottom: 1.5em;
-  padding: 0 0 0 1.5em;
+  margin: 2em auto;
 }
 .projects .card .details .tags {
-  background-color: rgb(111, 87, 84);
+  background-color: rgb(77, 52, 49);
   display: flex;
   width: 100%;
   gap: 1em;
@@ -238,7 +223,7 @@ nav li a {
 }
 .projects .card .details .tags .tag {
   padding: 1.5em;
-  color: rgb(247, 218, 218);
+  color: rgb(250, 187, 187);
 }
 
 .poster::before {
@@ -256,6 +241,11 @@ nav li a {
   bottom: 0;
 }
 
+body {
+  min-height: 100vh;
+  background: linear-gradient(165deg, #F88379, rgb(250, 187, 187));
+}
+
 .container {
   max-width: 75vw;
   margin: 0 auto;
@@ -267,11 +257,34 @@ nav li a {
   align-items: center;
   height: 100vh;
 }
-.hero .about {
+.hero .title {
   display: block;
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+.hero .title h1 {
+  font-family: "new-order", sans-serif;
+  color: rgb(250, 187, 187);
+}
+.hero .title h2 {
+  font-family: "handsome-pro", sans-serif;
+  text-transform: none;
+  font-size: clamp(2em, 5vw, 5em);
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.projects .title {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 5em auto;
 }
 
 h1,
@@ -283,17 +296,16 @@ h3 {
 
 h1 {
   font-size: clamp(3em, 15vw, 15em);
-  color: rgba(111, 87, 84, 0.5);
 }
 
 h2 {
   font-size: clamp(2em, 10vw, 10em);
-  color: rgb(111, 87, 84);
+  color: rgb(77, 52, 49);
 }
 
 h3 {
   font-size: clamp(1em, 5vw, 5em);
-  color: rgb(111, 87, 84);
+  color: rgb(77, 52, 49);
 }
 
 p {

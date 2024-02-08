@@ -1,15 +1,3 @@
-nav {
-    user-select: none;
-
-    li {
-        outline: 0;
-
-        a {
-            text-decoration: none;
-        }
-    }
-}
-
 .footer-nav {
     position: fixed;
     top: 0;
@@ -48,6 +36,13 @@ nav {
             &:hover {
                 color: $coffee;
             }
+
+            .nav-icon {
+                width: 75px;
+                height: 25px;
+                font-size: 30px;
+                text-align: center;
+            }
         }
     }
 
@@ -57,19 +52,11 @@ nav {
     }
 }
 
-.nav-icon {
-    width: 75px;
-    height: 25px;
-    font-size: 30px;
-    text-align: center;
-}
-
 .nav-text {
     width: 100px;
     height: 25px;
 }
 
 .active {
-    color: $coffee;
     background-color: $light-pink;
 }

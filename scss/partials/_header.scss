@@ -11,22 +11,17 @@ nav {
 }
 
 
-.site-header {
+.header-nav {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 75px;
     overflow: hidden;
-    background: rgba(111, 87, 84, 0.5);
+    background: rgba(255, 224, 220, 0.5);
     transition: width .05s linear;
     z-index: 10;
     padding-top: 15px;
-
-    .active {
-        color: $coffee;
-        background-color: $light-pink;
-    }
 
     .site-nav {
         position: relative;
@@ -49,13 +44,13 @@ nav {
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            color: $light-pink;
+            color: $coral;
             font-size: 1rem;
             transition: all 0.1s linear;
             padding: 15px 0;
 
             &:hover {
-                color: $coffee;
+                color: $coral;
             }
 
             .nav-icon {
@@ -76,4 +71,8 @@ nav {
 .nav-text {
     width: 100px;
     height: 25px;
+}
+
+.active {
+    background-color: $light-pink;
 }

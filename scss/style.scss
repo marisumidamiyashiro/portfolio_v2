@@ -5,14 +5,15 @@
 }
 
 // VARIABLES
-$light-pink: rgb(247, 218, 218);
+$light-pink: rgb(250, 187, 187);
 $sand: rgb(209, 181, 173);
-$coffee: rgb(111, 87, 84);
+$coffee: rgb(77, 52, 49);
+$coral: #F88379;
 
-body {
-    min-height: 100vh;
-    background: linear-gradient(80deg, $coffee, $light-pink);
-}
+$script: "handsome-pro", sans-serif;
+$body: "new-order", sans-serif;
+
+
 
 @import "partials/header";
 @import "partials/footer";
