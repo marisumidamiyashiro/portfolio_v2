@@ -128,23 +128,20 @@ nav li a {
   background-color: rgb(250, 187, 187);
 }
 
-.projects {
-  position: relative;
-  display: block;
-  justify-content: center;
-}
-.projects .section-title {
+.section-title {
   display: flex;
   justify-content: center;
 }
-.projects .work {
+
+.work {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   gap: 25px;
 }
-.projects .card {
+
+.card {
   position: relative;
   width: 400px;
   height: 400px;
@@ -153,7 +150,7 @@ nav li a {
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.projects .card .poster {
+.card .poster {
   position: relative;
   top: 0;
   left: 0;
@@ -161,7 +158,7 @@ nav li a {
   height: 100%;
   overflow: hidden;
 }
-.projects .card .poster img {
+.card .poster img {
   position: absolute;
   top: 0;
   left: 0;
@@ -170,7 +167,7 @@ nav li a {
   object-fit: cover;
   transition: 0.3s;
 }
-.projects .card .details {
+.card .details {
   position: absolute;
   bottom: -100%;
   left: 0;
@@ -181,23 +178,23 @@ nav li a {
   color: rgb(77, 52, 49);
   z-index: 2;
 }
-.projects .card .details a {
+.card .details a {
   text-decoration: none;
 }
-.projects .card .details h1,
-.projects .card .details h2 {
+.card .details h1,
+.card .details h2 {
   color: #443e44;
   font-family: helvetica;
 }
-.projects .card .details h1 {
+.card .details h1 {
   font-size: 1.5em;
   padding: 1em 0.5em 0.5em 0.5em;
 }
-.projects .card .details h2 {
+.card .details h2 {
   font-size: 1em;
   padding: 0 0.5em 0.25em 0.5em;
 }
-.projects .card .details .desciption {
+.card .details .desciption {
   color: rgb(77, 52, 49);
   font-family: "new-order", sans-serif;
   font-size: clamp(0.5em, 0.8vw, 0.8em);
@@ -206,7 +203,7 @@ nav li a {
   line-height: 1.5;
   margin: 2em auto;
 }
-.projects .card .details .tags {
+.card .details .tags {
   background-color: rgb(77, 52, 49);
   display: flex;
   width: 100%;
@@ -221,7 +218,7 @@ nav li a {
   font-style: normal;
   padding: 0.5em;
 }
-.projects .card .details .tags .tag {
+.card .details .tags .tag {
   padding: 1.5em;
   color: rgb(250, 187, 187);
 }
@@ -245,7 +242,6 @@ body {
   min-height: 100vh;
   background: linear-gradient(90deg, #F88379, rgb(250, 187, 187));
   grid-template-columns: repeat(12, 1fr);
-  padding-bottom: 8em;
 }
 
 .container {
@@ -279,7 +275,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  margin-bottom: 5em;
 }
 .projects .title {
   display: block;
@@ -303,6 +299,61 @@ body {
   color: #333;
 }
 
+.overview {
+  width: 60vw;
+  margin: 3em auto;
+}
+
+@media (max-width: 767px) {
+  .header-nav,
+  .footer-nav {
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+  }
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(111, 87, 84, 0.5);
+    transition: width 0.05s linear;
+    z-index: 10;
+  }
+  .mobile-nav ul {
+    display: flex;
+  }
+  .mobile-nav li {
+    display: block;
+    flex-direction: row;
+    width: 180px;
+    font-family: beloved-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .mobile-nav li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(77, 52, 49);
+    font-size: 1rem;
+    padding: 25px 0;
+  }
+  .mobile-nav li a .nav-icon {
+    width: 75px;
+    height: 25px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media (min-width: 767px) {
+  .mobile-nav {
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+  }
+}
 h1,
 h2,
 h3 {
