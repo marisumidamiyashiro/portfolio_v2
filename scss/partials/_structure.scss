@@ -14,7 +14,9 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(165deg, $coral, $light-pink);
+    background: linear-gradient(90deg, $coral, $light-pink);
+    grid-template-columns: repeat(12, 1fr);
+    padding-bottom: 8em;
 }
 
 .container {
@@ -59,5 +61,22 @@ body {
         text-align: center;
         align-items: center;
         margin: 5em auto;
+    }
+}
+
+
+.software {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
+        font-family: $body;
+        color: #333;
     }
 }

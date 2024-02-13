@@ -79,7 +79,7 @@
             .desciption {
                 color: $coffee;
                 font-family: $body;
-                font-size: 80%;
+                font-size: clamp(.5em, .8vw, .8em);
                 max-width: 350px;
                 opacity: .8;
                 line-height: 1.5;

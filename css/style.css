@@ -200,7 +200,7 @@ nav li a {
 .projects .card .details .desciption {
   color: rgb(77, 52, 49);
   font-family: "new-order", sans-serif;
-  font-size: 80%;
+  font-size: clamp(0.5em, 0.8vw, 0.8em);
   max-width: 350px;
   opacity: 0.8;
   line-height: 1.5;
@@ -243,7 +243,9 @@ nav li a {
 
 body {
   min-height: 100vh;
-  background: linear-gradient(165deg, #F88379, rgb(250, 187, 187));
+  background: linear-gradient(90deg, #F88379, rgb(250, 187, 187));
+  grid-template-columns: repeat(12, 1fr);
+  padding-bottom: 8em;
 }
 
 .container {
@@ -285,6 +287,20 @@ body {
   text-align: center;
   align-items: center;
   margin: 5em auto;
+}
+
+.software {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.software h3 {
+  font-size: 2em;
+}
+.software p {
+  font-size: 1.5em;
+  font-family: "new-order", sans-serif;
+  color: #333;
 }
 
 h1,
