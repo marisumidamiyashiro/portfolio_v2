@@ -173,7 +173,7 @@ nav li a {
   left: 0;
   width: 100%;
   height: 75%;
-  background: rgba(247, 218, 218, 0.9);
+  background: rgba(206, 189, 189, 0.9);
   transition: 0.3s;
   color: rgb(77, 52, 49);
   z-index: 2;
@@ -245,7 +245,7 @@ body {
 }
 
 .container {
-  max-width: 75vw;
+  max-width: 75%;
   margin: 0 auto;
 }
 
@@ -262,11 +262,13 @@ body {
   align-items: center;
 }
 .hero .title h1 {
-  font-family: "new-order", sans-serif;
+  font-family: "handsome-pro", sans-serif;
   color: rgb(250, 187, 187);
+  text-transform: none;
+  font-size: clamp(4em, 18vw, 18em);
 }
 .hero .title h2 {
-  font-family: "handsome-pro", sans-serif;
+  font-family: "rufina", sans-serif;
   text-transform: none;
   font-size: clamp(2em, 5vw, 5em);
 }
@@ -285,23 +287,45 @@ body {
   margin: 5em auto;
 }
 
-.software {
+.project-page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 90vh;
 }
-.software h3 {
-  font-size: 2em;
+.project-page h1 {
+  text-align: center;
+  font-family: "rufina", sans-serif;
+  color: rgb(250, 187, 187);
+  font-size: clamp(5em, 10vw, 10em);
 }
-.software p {
+.project-page .project-info {
+  display: grid;
+  align-items: center;
+}
+.project-page .project-info .overview h3 {
   font-size: 1.5em;
   font-family: "new-order", sans-serif;
-  color: #333;
 }
-
-.overview {
-  width: 60vw;
-  margin: 3em auto;
+.project-page .project-info .overview span {
+  font-size: 1em;
+  font-family: "new-order", sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+.project-page .project-info .overview .software,
+.project-page .project-info .overview .year {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.project-page .project-info .challenge {
+  font-size: 1em;
+  font-family: "new-order", sans-serif;
+  color: #333;
+  text-align: left;
+  line-height: 1.5;
 }
 
 @media (max-width: 767px) {
@@ -357,7 +381,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Lucida Sans", sans-serif;
+  font-family: "new-order", sans-serif;
   text-transform: uppercase;
 }
 
@@ -377,4 +401,88 @@ h3 {
 
 p {
   width: 25vw;
+}
+
+/* GRID SYSTEM */
+.row {
+  --gridgap: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+@media (min-width: 768px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--gridgap);
+  }
+  .row.vertical-centered {
+    align-items: center;
+  }
+  .row.swapped > *:first-child {
+    order: 2;
+  }
+  .row.swapped > *:last-child {
+    order: 1;
+  }
+  .one-whole {
+    grid-column: span 12/span 12;
+  }
+  .one-half {
+    grid-column: span 6/span 6;
+  }
+  .one-third {
+    grid-column: span 4/span 4;
+  }
+  .two-thirds {
+    grid-column: span 8/span 8;
+  }
+  .one-fourth {
+    grid-column: span 3/span 3;
+  }
+  .three-fourths {
+    grid-column: span 9/span 9;
+  }
+  .one-half.centered {
+    grid-column-start: 4;
+  }
+  .one-third.centered {
+    grid-column-start: 5;
+  }
+  .two-thirds.centered {
+    grid-column-start: 3;
+  }
+  .col_2-12 {
+    grid-column: 2/12;
+  }
+  .challenge {
+    grid-column: 3/6;
+  }
+  .overview {
+    grid-column: 9/11;
+  }
+  .col_1-5 {
+    grid-column: 1/6;
+  }
+  .col_2-5 {
+    grid-column: 2/6;
+  }
+  .col_7-11 {
+    grid-column: 7/12;
+  }
+  .col_7-12 {
+    grid-column: 7/13;
+  }
+}
+/* FOR DEMO GRID ONLY */
+.demo .row {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.demo .row > * {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  text-align: center;
+  margin-bottom: var(--gridgap);
 }
