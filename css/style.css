@@ -146,7 +146,7 @@ nav li a {
   width: 400px;
   height: 400px;
   background: #ccc;
-  border-radius: 18px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -328,56 +328,14 @@ body {
   line-height: 1.5;
 }
 
-@media (max-width: 767px) {
-  .header-nav,
-  .footer-nav {
-    position: absolute;
-    left: -99999px;
-    top: -99999px;
-  }
-  .mobile-nav {
-    position: fixed;
-    bottom: 0;
-    height: 75px;
-    width: 100%;
-    overflow: hidden;
-    background: rgba(111, 87, 84, 0.5);
-    transition: width 0.05s linear;
-    z-index: 10;
-  }
-  .mobile-nav ul {
-    display: flex;
-  }
-  .mobile-nav li {
-    display: block;
-    flex-direction: row;
-    width: 180px;
-    font-family: beloved-sans, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  .mobile-nav li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(77, 52, 49);
-    font-size: 1rem;
-    padding: 25px 0;
-  }
-  .mobile-nav li a .nav-icon {
-    width: 75px;
-    height: 25px;
-    font-size: 30px;
-    text-align: center;
-  }
+hr {
+  height: 3px;
+  border-width: 0;
+  background-color: #333;
+  width: 10%;
+  margin: 2em auto;
 }
-@media (min-width: 767px) {
-  .mobile-nav {
-    position: absolute;
-    left: -99999px;
-    top: -99999px;
-  }
-}
+
 h1,
 h2,
 h3 {
@@ -405,9 +363,9 @@ p {
 
 /* GRID SYSTEM */
 .row {
-  --gridgap: 2em;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  --gridgap: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 @media (min-width: 768px) {
@@ -481,8 +439,60 @@ p {
 }
 
 .demo .row > * {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 1em;
   text-align: center;
-  margin-bottom: var(--gridgap);
+}
+
+img {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .header-nav,
+  .footer-nav {
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+  }
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(111, 87, 84, 0.5);
+    transition: width 0.05s linear;
+    z-index: 10;
+  }
+  .mobile-nav ul {
+    display: flex;
+  }
+  .mobile-nav li {
+    display: block;
+    flex-direction: row;
+    width: 180px;
+    font-family: beloved-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .mobile-nav li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(77, 52, 49);
+    font-size: 1rem;
+    padding: 25px 0;
+  }
+  .mobile-nav li a .nav-icon {
+    width: 75px;
+    height: 25px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media (min-width: 767px) {
+  .mobile-nav {
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+  }
 }

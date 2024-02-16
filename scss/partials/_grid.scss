@@ -1,8 +1,8 @@
 /* GRID SYSTEM */
 .row {
-    --gridgap: 2em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    --gridgap: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 @media (min-width: 768px) {
@@ -90,14 +90,15 @@
 }
 
 /* FOR DEMO GRID ONLY */
+
 .demo .row {
     margin-bottom: 0;
     padding: 0;
 }
 
 .demo .row>* {
-    background: rgb(0 0 0 / .1);
-    padding: 1em;
+    // background: rgb(0 0 0 / .1);
+    // padding: 1em;
     text-align: center;
-    margin-bottom: var(--gridgap);
+    // margin-bottom: var(--gridgap);
 }
