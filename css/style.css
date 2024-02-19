@@ -173,7 +173,7 @@ nav li a {
   left: 0;
   width: 100%;
   height: 75%;
-  background: rgba(206, 189, 189, 0.9);
+  background: rgba(206, 189, 189, 0.5);
   transition: 0.3s;
   color: rgb(77, 52, 49);
   z-index: 2;
@@ -223,6 +223,51 @@ nav li a {
   color: rgb(250, 187, 187);
 }
 
+.card2 {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+.card2:hover {
+  filter: grayscale(0);
+}
+.card2 .poster {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.card2 .poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card2 .details {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+  z-index: 2;
+}
+.card2 .details h1 {
+  color: #333;
+  font-size: 1.5em;
+  padding: 1em;
+}
+
 .poster::before {
   content: "";
   position: absolute;
@@ -235,6 +280,10 @@ nav li a {
 }
 
 .card:hover .details {
+  bottom: 0;
+}
+
+.card2:hover .details {
   bottom: 0;
 }
 

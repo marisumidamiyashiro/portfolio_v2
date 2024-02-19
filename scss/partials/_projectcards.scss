@@ -45,7 +45,7 @@
         left: 0;
         width: 100%;
         height: 75%;
-        background: rgba(206, 189, 189, 0.9);
+        background: rgba(206, 189, 189, 0.5);
         transition: .3s;
         color: $coffee;
         z-index: 2;
@@ -78,7 +78,6 @@
             opacity: .8;
             line-height: 1.5;
             margin: 2em auto;
-
         }
 
         .tags {
@@ -104,6 +103,57 @@
     }
 }
 
+.card2 {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    filter: grayscale(1);
+    transition: .5s;
+
+    &:hover {
+        filter: grayscale(0);
+    }
+
+    .poster {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .details {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 25%;
+        background: rgba(255, 255, 255, 0.7);
+        transition: .3s;
+        z-index: 2;
+
+        h1 {
+            color: #333;
+            font-size: 1.5em;
+            padding: 1em;
+        }
+    }
+}
+
 .poster::before {
     content: '';
     position: absolute;
@@ -116,5 +166,9 @@
 }
 
 .card:hover .details {
+    bottom: 0;
+}
+
+.card2:hover .details {
     bottom: 0;
 }
