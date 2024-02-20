@@ -20,5 +20,6 @@ h3 {
 }
 
 p {
-    width: 25vw;
+    max-width: clamp(300px, 25vw, 500px);
+    margin: 0 1em;
 }
