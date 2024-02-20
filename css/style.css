@@ -141,88 +141,6 @@ nav li a {
   gap: 25px;
 }
 
-.card {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  background: #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-.card .poster {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.card .poster img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s;
-}
-.card .details {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  height: 75%;
-  background: rgba(206, 189, 189, 0.5);
-  transition: 0.3s;
-  color: rgb(77, 52, 49);
-  z-index: 2;
-}
-.card .details a {
-  text-decoration: none;
-}
-.card .details h1,
-.card .details h2 {
-  color: #443e44;
-  font-family: helvetica;
-}
-.card .details h1 {
-  font-size: 1.5em;
-  padding: 1em 0.5em 0.5em 0.5em;
-}
-.card .details h2 {
-  font-size: 1em;
-  padding: 0 0.5em 0.25em 0.5em;
-}
-.card .details .desciption {
-  color: rgb(77, 52, 49);
-  font-family: "new-order", sans-serif;
-  font-size: clamp(0.5em, 0.8vw, 0.8em);
-  max-width: 350px;
-  opacity: 0.8;
-  line-height: 1.5;
-  margin: 2em auto;
-}
-.card .details .tags {
-  background-color: rgb(77, 52, 49);
-  display: flex;
-  width: 100%;
-  gap: 1em;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 0.875em;
-  font-size: 0.55em;
-  font-family: new-order, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding: 0.5em;
-}
-.card .details .tags .tag {
-  padding: 1.5em;
-  color: rgb(250, 187, 187);
-}
-
 .card2 {
   position: relative;
   width: 400px;
@@ -230,11 +148,7 @@ nav li a {
   background: #ccc;
   border-radius: 10px;
   overflow: hidden;
-  filter: grayscale(1);
-  transition: 0.5s;
-}
-.card2:hover {
-  filter: grayscale(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .card2 .poster {
   position: relative;
@@ -251,8 +165,94 @@ nav li a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s;
 }
 .card2 .details {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background: rgba(206, 189, 189, 0.5);
+  transition: 0.3s;
+  color: rgb(77, 52, 49);
+  z-index: 2;
+}
+.card2 .details a {
+  text-decoration: none;
+}
+.card2 .details h1,
+.card2 .details h2 {
+  color: #443e44;
+  font-family: helvetica;
+}
+.card2 .details h1 {
+  font-size: 1.5em;
+  padding: 1em 0.5em 0.5em 0.5em;
+}
+.card2 .details h2 {
+  font-size: 1em;
+  padding: 0 0.5em 0.25em 0.5em;
+}
+.card2 .details .desciption {
+  color: rgb(77, 52, 49);
+  font-family: "new-order", sans-serif;
+  font-size: clamp(0.5em, 0.8vw, 0.8em);
+  max-width: 350px;
+  opacity: 0.8;
+  line-height: 1.5;
+  margin: 2em auto;
+}
+.card2 .details .tags {
+  background-color: rgb(77, 52, 49);
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.875em;
+  font-size: 0.55em;
+  font-family: new-order, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0.5em;
+}
+.card2 .details .tags .tag {
+  padding: 1.5em;
+  color: rgb(250, 187, 187);
+}
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+.card:hover {
+  filter: grayscale(0);
+}
+.card .poster {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.card .poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .details {
   position: absolute;
   bottom: -100%;
   left: 0;
@@ -262,7 +262,7 @@ nav li a {
   transition: 0.3s;
   z-index: 2;
 }
-.card2 .details h1 {
+.card .details h1 {
   color: #333;
   font-size: 1.5em;
   padding: 1em;
@@ -289,12 +289,11 @@ nav li a {
 
 body {
   min-height: 100vh;
-  background: linear-gradient(90deg, #F88379, rgb(250, 187, 187));
   grid-template-columns: repeat(12, 1fr);
 }
 
 .container {
-  max-width: 75%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -336,53 +335,87 @@ body {
   margin: 5em auto;
 }
 
-.project-page {
+.project-main .project-page {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90vh;
 }
-.project-page h1 {
+.project-main .project-page .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-main .project-page .container h1 {
+  margin-top: 1em;
   text-align: center;
   font-family: "rufina", sans-serif;
   color: rgb(250, 187, 187);
   font-size: clamp(5em, 10vw, 10em);
 }
-.project-page .project-info {
+.project-main .project-page .project-hero {
   display: grid;
   align-items: center;
 }
-.project-page .project-info .overview h3 {
+.project-main .project-page .project-hero .overview h3 {
   font-size: 1.5em;
   font-family: "new-order", sans-serif;
 }
-.project-page .project-info .overview span {
+.project-main .project-page .project-hero .overview span {
   font-size: 1em;
   font-family: "new-order", sans-serif;
   color: #333;
   line-height: 1.5;
 }
-.project-page .project-info .overview .software,
-.project-page .project-info .overview .year {
+.project-main .project-page .project-hero .overview .software,
+.project-main .project-page .project-hero .overview .year {
   display: flex;
   flex-direction: column;
   padding: 1em;
 }
-.project-page .project-info .challenge {
+.project-main .project-page .project-hero .challenge {
   font-size: 1em;
   font-family: "new-order", sans-serif;
   color: #333;
   text-align: left;
   line-height: 1.5;
 }
-
-hr {
-  height: 3px;
+.project-main hr {
+  height: 5px;
   border-width: 0;
   background-color: #333;
   width: 10%;
-  margin: 2em auto;
+  margin: 5em auto;
+}
+.project-main p {
+  font-size: 1em;
+  font-family: "new-order", sans-serif;
+  color: #333;
+  text-align: left;
+  line-height: 1.5;
+}
+.project-main img {
+  height: 400px;
+  width: auto;
+  overflow: hidden;
+  object-fit: cover;
+}
+.project-main .process p,
+.project-main .solution p {
+  background-color: rgba(243, 243, 243, 0.9);
+  box-shadow: 5px 5px 5px 0 #616161;
+  padding: 3em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+.project-main .process hr,
+.project-main .solution hr {
+  height: 3px;
+  width: 25%;
+}
+.project-main .solution p {
+  width: 900px;
 }
 
 h1,
@@ -420,8 +453,10 @@ p {
 @media (min-width: 768px) {
   .row {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--gridgap);
+    align-items: center;
   }
   .row.vertical-centered {
     align-items: center;
@@ -482,17 +517,9 @@ p {
   }
 }
 /* FOR DEMO GRID ONLY */
-.demo .row {
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.demo .row > * {
-  text-align: center;
-}
-
 img {
   width: 100%;
+  border-radius: 10px;
 }
 
 @media (max-width: 767px) {

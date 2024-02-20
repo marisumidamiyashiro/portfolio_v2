@@ -8,8 +8,10 @@
 @media (min-width: 768px) {
     .row {
         display: grid;
+        justify-items: center;
         grid-template-columns: repeat(12, 1fr);
         gap: var(--gridgap);
+        align-items: center;
     }
 
     .row.vertical-centered {
@@ -91,14 +93,14 @@
 
 /* FOR DEMO GRID ONLY */
 
-.demo .row {
-    margin-bottom: 0;
-    padding: 0;
-}
+// .demo .row {
+//     margin-bottom: 0;
+//     padding: 0;
+// }
 
-.demo .row>* {
-    // background: rgb(0 0 0 / .1);
-    // padding: 1em;
-    text-align: center;
-    // margin-bottom: var(--gridgap);
-}
+// .demo .row>* {
+//     background: rgb(0 0 0 / .1);
+//     padding: 1em;
+//     text-align: center;
+//     margin-bottom: var(--gridgap);
+// }
