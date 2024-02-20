@@ -18,7 +18,7 @@ nav {
     height: 100%;
     width: 75px;
     overflow: hidden;
-    background: rgba(255, 224, 220, 0.5);
+    background: rgba(100, 100, 100, 0.5);
     transition: width .05s linear;
     z-index: 10;
     padding-top: 15px;
@@ -44,13 +44,13 @@ nav {
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            color: $coral;
+            color: $coffee;
             font-size: 1rem;
             transition: all 0.1s linear;
             padding: 15px 0;
 
             &:hover {
-                color: $coral;
+                color: $coffee;
             }
 
             .nav-icon {

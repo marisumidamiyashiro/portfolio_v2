@@ -21,7 +21,7 @@ nav li a {
   height: 100%;
   width: 75px;
   overflow: hidden;
-  background: rgba(255, 224, 220, 0.5);
+  background: rgba(100, 100, 100, 0.5);
   transition: width 0.05s linear;
   z-index: 10;
   padding-top: 15px;
@@ -35,7 +35,7 @@ nav li a {
   font-style: normal;
 }
 .header-nav .site-nav li:hover {
-  background-color: rgb(250, 187, 187);
+  background-color: rgb(145, 145, 145);
 }
 .header-nav .site-nav a {
   text-decoration: none;
@@ -43,13 +43,13 @@ nav li a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: #F88379;
+  color: rgb(77, 52, 49);
   font-size: 1rem;
   transition: all 0.1s linear;
   padding: 15px 0;
 }
 .header-nav .site-nav a:hover {
-  color: #F88379;
+  color: rgb(77, 52, 49);
 }
 .header-nav .site-nav a .nav-icon {
   width: 75px;
@@ -68,7 +68,7 @@ nav li a {
 }
 
 .active {
-  background-color: rgb(250, 187, 187);
+  background-color: rgb(145, 145, 145);
 }
 
 .footer-nav {
@@ -78,7 +78,7 @@ nav li a {
   height: 100%;
   width: 75px;
   overflow: hidden;
-  background: rgba(111, 87, 84, 0.5);
+  background: rgba(100, 100, 100, 0.5);
   transition: width 0.05s linear;
   z-index: 10;
   padding-top: 15px;
@@ -93,7 +93,7 @@ nav li a {
 }
 .footer-nav li:hover {
   text-decoration: none;
-  background-color: rgb(250, 187, 187);
+  background-color: rgb(145, 145, 145);
 }
 .footer-nav li a {
   display: flex;
@@ -125,7 +125,7 @@ nav li a {
 }
 
 .active {
-  background-color: rgb(250, 187, 187);
+  background-color: rgb(145, 145, 145);
 }
 
 .section-title {
@@ -220,7 +220,7 @@ nav li a {
 }
 .card2 .details .tags .tag {
   padding: 1.5em;
-  color: rgb(250, 187, 187);
+  color: rgb(145, 145, 145);
 }
 
 .card {
@@ -289,6 +289,7 @@ nav li a {
 
 body {
   min-height: 100vh;
+  background: linear-gradient(90deg, #F88379, rgb(145, 145, 145));
   grid-template-columns: repeat(12, 1fr);
 }
 
@@ -311,12 +312,12 @@ body {
 }
 .hero .title h1 {
   font-family: "handsome-pro", sans-serif;
-  color: rgb(250, 187, 187);
+  color: rgb(77, 52, 49);
   text-transform: none;
   font-size: clamp(4em, 18vw, 18em);
 }
 .hero .title h2 {
-  font-family: "rufina", sans-serif;
+  font-family: "new-order", sans-serif;
   text-transform: none;
   font-size: clamp(2em, 5vw, 5em);
 }
@@ -351,7 +352,7 @@ body {
   margin-top: 1em;
   text-align: center;
   font-family: "rufina", sans-serif;
-  color: rgb(250, 187, 187);
+  color: rgb(77, 52, 49);
   font-size: clamp(5em, 10vw, 10em);
 }
 .project-main .project-page .project-hero {

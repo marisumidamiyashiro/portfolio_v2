@@ -1,6 +1,6 @@
 body {
     min-height: 100vh;
-    // background: linear-gradient(90deg, $coral, $light-pink);
+    background: linear-gradient(90deg, #F88379, $light-pink);
     grid-template-columns: repeat(12, 1fr);
 }
 
@@ -25,13 +25,13 @@ body {
 
         h1 {
             font-family: $script;
-            color: $light-pink;
+            color: $coffee;
             text-transform: none;
             font-size: clamp(4em, 18vw, 18em);
         }
 
         h2 {
-            font-family: $title;
+            font-family: $body;
             text-transform: none;
             font-size: clamp(2em, 5vw, 5em);
         }
