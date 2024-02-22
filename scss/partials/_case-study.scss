@@ -1,106 +1,137 @@
-// CASE STUDY PAGE
+.casestudy-main {
+    background-color: white;
+    width: 80%;
 
-.project-main {
+    img {
+        border: 1px solid $coffee;
+    }
 
-    .project-page {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .casestudy-project-overview {
 
-        .container {
+        margin-bottom: 10em;
+
+        .casestudy-hero {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            h1 {
-                margin-top: 1em;
-                text-align: center;
+            .casestudy-title {
                 font-family: $title;
                 color: $coffee;
-                font-size: clamp(5em, 10vw, 10em);
+                margin-top: .5em;
+                font-size: clamp(3em, 9vw, 9em);
+                text-align: center;
             }
 
-        }
+            .casestudy-hero-image {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: 1em;
 
-        .project-hero {
-            display: grid;
-            align-items: center;
-
-            .overview {
-
-                h3 {
-                    font-size: 1.5em;
-                    font-family: $body;
+                img {
+                    height: 600px;
                 }
+            }
 
-                span {
-                    font-size: 1em;
+            .casestudy-overview {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 60%;
+                margin: auto;
+
+                p {
                     font-family: $body;
-                    color: #333;
                     line-height: 1.5;
                 }
 
-                .software,
-                .year {
+                .casestudy-software,
+                .casestudy-year {
                     display: flex;
                     flex-direction: column;
-                    padding: 1em;
+                    align-items: end;
+
+                    h3 {
+                        font-family: $title;
+                        font-size: clamp(1em, 2vw, 2em);
+                        margin-top: .5em;
+                    }
+
+                    span {
+                        font-family: $body;
+                        line-height: 1.5;
+                    }
                 }
             }
 
-            .challenge {
-                font-size: 1em;
+        }
+    }
+
+    .casestudy-project-process {
+
+        .casestudy-process {
+            // background-color: gray;
+
+            .one-whole {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p {
                 font-family: $body;
-                color: #333;
-                text-align: left;
                 line-height: 1.5;
             }
         }
-    }
 
-    hr {
-        height: 5px;
-        border-width: 0;
-        background-color: #333;
-        width: 10%;
-        margin: 5em auto;
-    }
-
-    p {
-        font-size: 1em;
-        font-family: $body;
-        color: #333;
-        text-align: left;
-        line-height: 1.5;
-    }
-
-    .process,
-    .solution {
-
-        p {
-            background-color: rgba(243, 243, 243, 0.9);
-            box-shadow: 5px 5px 5px 0 #616161;
-            padding: 3em;
-            border-radius: 10px;
-            margin-bottom: 1em;
+        .one-whole.casestudy-process-images,
+        .two-thirds.casestudy-process-images {
+            display: flex;
+            flex-wrap: nowrap;
         }
 
-        hr {
-            height: 3px;
-            width: 25%;
+        .casestudy-process-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
         }
 
         img {
             height: 400px;
             max-width: 100%;
+            margin: 1em;
         }
-
     }
 
-    .solution {
-        p {
-            width: 900px;
+    .casestudy-more-projects {
+        display: flex;
+        flex-direction: column;
+
+        hr {
+            height: 3px;
+            border-width: 0;
+            background-color: $coffee;
         }
+
+        .more-projects {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                text-decoration: none;
+                color: $coffee;
+                font-family: $title;
+                font-size: 2em;
+                font-weight: 700;
+                line-height: 3;
+                padding: 1em 3em;
+            }
+        }
+
+        margin-bottom: 10em;
     }
 }

@@ -1,106 +1,57 @@
-/* GRID SYSTEM */
+$gridgap: 2%;
+
 .row {
-    --gridgap: .25em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($gridgap / 2);
+    margin-right: -($gridgap / 2);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
 
-@media (min-width: 768px) {
-    .row {
-        display: grid;
-        justify-items: center;
-        grid-template-columns: repeat(12, 1fr);
-        gap: var(--gridgap);
-        align-items: center;
-    }
-
-    .row.vertical-centered {
-        align-items: center;
-    }
-
-    .row.swapped>*:first-child {
-        order: 2;
-    }
-
-    .row.swapped>*:last-child {
-        order: 1;
+    >* {
+        margin: ($gridgap / 2);
+        flex-grow: 1;
     }
 
     .one-whole {
-        grid-column: span 12 / span 12;
+        width: 100%-$gridgap;
     }
 
     .one-half {
-        grid-column: span 6 / span 6;
+        width: 50%-$gridgap;
     }
 
     .one-third {
-        grid-column: span 4 / span 4;
+        width: 33.333%-$gridgap;
     }
 
     .two-thirds {
-        grid-column: span 8 / span 8;
+        width: 66.666%-$gridgap;
     }
 
     .one-fourth {
-        grid-column: span 3 / span 3;
+        width: 25%-$gridgap;
     }
 
     .three-fourths {
-        grid-column: span 9 / span 9;
+        width: 75%-$gridgap;
     }
 
-    .one-half.centered {
-        grid-column-start: 4;
+    .push-one-fourth {
+        margin-left: 25%+($gridgap/2);
     }
 
-    .one-third.centered {
-        grid-column-start: 5;
+    .push-one-third {
+        margin-left: 33.333%+($gridgap/2);
     }
 
-    .two-thirds.centered {
-        grid-column-start: 3;
+    .push-one-half {
+        margin-left: 50%+($gridgap/2);
     }
 
-    .col_2-12 {
-        grid-column: 2 / 12;
-    }
-
-    .challenge {
-        grid-column: 3 / 6;
-    }
-
-    .overview {
-        grid-column: 9 / 11;
-    }
-
-    .col_1-5 {
-        grid-column: 1 / 6;
-    }
-
-    .col_2-5 {
-        grid-column: 2 / 6;
-    }
-
-    .col_7-11 {
-        grid-column: 7 / 12;
-    }
-
-    .col_7-12 {
-        grid-column: 7 / 13;
+    .centered {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-
-/* FOR DEMO GRID ONLY */
-
-// .demo .row {
-//     margin-bottom: 0;
-//     padding: 0;
-// }
-
-// .demo .row>* {
-//     background: rgb(0 0 0 / .1);
-//     padding: 1em;
-//     text-align: center;
-//     margin-bottom: var(--gridgap);
-// }
