@@ -4,6 +4,7 @@
 
     img {
         border: 1px solid $coffee;
+        box-shadow: 15px 15px 0 $light-pink;
     }
 
     .casestudy-project-overview {
@@ -37,6 +38,7 @@
 
             .casestudy-overview {
                 display: flex;
+                flex: wrap;
                 align-items: center;
                 justify-content: space-between;
                 width: 60%;
@@ -74,16 +76,23 @@
         .casestudy-process {
             // background-color: gray;
 
-            .one-whole {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            .body-copy {
+                background-color: $light-pink;
+                padding: 2em;
+                box-shadow: 15px 15px 0 $coffee;
             }
 
             p {
                 font-family: $body;
                 line-height: 1.5;
             }
+
+            .one-whole {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
         }
 
         .one-whole.casestudy-process-images,

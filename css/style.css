@@ -262,6 +262,7 @@ body {
 }
 .casestudy-main img {
   border: 1px solid rgb(77, 52, 49);
+  box-shadow: 15px 15px 0 rgb(255, 230, 230);
 }
 .casestudy-main .casestudy-project-overview {
   margin-bottom: 10em;
@@ -290,6 +291,7 @@ body {
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview {
   display: flex;
+  flex: wrap;
   align-items: center;
   justify-content: space-between;
   width: 60%;
@@ -316,14 +318,19 @@ body {
   font-family: "new-order", sans-serif;
   line-height: 1.5;
 }
-.casestudy-main .casestudy-project-process .casestudy-process .one-whole {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.casestudy-main .casestudy-project-process .casestudy-process .body-copy {
+  background-color: rgb(255, 230, 230);
+  padding: 2em;
+  box-shadow: 15px 15px 0 rgb(77, 52, 49);
 }
 .casestudy-main .casestudy-project-process .casestudy-process p {
   font-family: "new-order", sans-serif;
   line-height: 1.5;
+}
+.casestudy-main .casestudy-project-process .casestudy-process .one-whole {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .casestudy-main .casestudy-project-process .one-whole.casestudy-process-images,
 .casestudy-main .casestudy-project-process .two-thirds.casestudy-process-images {
@@ -437,31 +444,15 @@ p {
 }
 
 img {
-  height: clamp(250px, 100%, 400px);
+  height: clamp(200px, 100%, 400px);
   object-fit: cover;
   overflow: hidden;
-  box-shadow: 15px 15px 0 rgb(255, 230, 230);
 }
 
 @media (max-width: 767px) {
-  .row {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  .row .one-whole,
-  .row .one-half,
-  .row .one-third {
-    margin: 1em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .row .one-whole img,
-  .row .one-half img,
-  .row .one-third img {
-    max-width: 75vw;
+  img {
+    height: 200px;
+    max-width: 100%;
   }
   .header-nav,
   .footer-nav {
@@ -503,6 +494,10 @@ img {
     height: 25px;
     font-size: 30px;
     text-align: center;
+  }
+  .row > * {
+    flex-grow: 0;
+    flex-direction: column;
   }
 }
 @media (min-width: 767px) {
