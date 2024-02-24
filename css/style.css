@@ -21,7 +21,7 @@ nav li a {
   height: 100%;
   width: 75px;
   overflow: hidden;
-  background: rgba(100, 100, 100, 0.5);
+  border-right: 2px solid #ccc;
   transition: width 0.05s linear;
   z-index: 10;
   padding-top: 15px;
@@ -208,9 +208,6 @@ nav li a {
 body {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(90deg, #F88379, rgb(255, 230, 230));
-  grid-template-columns: repeat(12, 1fr);
 }
 
 .container {
@@ -257,12 +254,7 @@ body {
 }
 
 .casestudy-main {
-  background-color: white;
-  width: 80%;
-}
-.casestudy-main img {
-  border: 1px solid rgb(77, 52, 49);
-  box-shadow: 15px 15px 0 rgb(255, 230, 230);
+  width: 100%;
 }
 .casestudy-main .casestudy-project-overview {
   margin-bottom: 10em;
@@ -305,7 +297,7 @@ body {
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software h3,
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year h3 {
@@ -318,12 +310,9 @@ body {
   font-family: "new-order", sans-serif;
   line-height: 1.5;
 }
-.casestudy-main .casestudy-project-process .casestudy-process .body-copy {
-  background-color: rgb(255, 230, 230);
-  padding: 2em;
-  box-shadow: 15px 15px 0 rgb(77, 52, 49);
-}
 .casestudy-main .casestudy-project-process .casestudy-process p {
+  background-color: #ccc;
+  padding: 2em;
   font-family: "new-order", sans-serif;
   line-height: 1.5;
 }
@@ -339,7 +328,6 @@ body {
 }
 .casestudy-main .casestudy-project-process .casestudy-process-images {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -351,6 +339,8 @@ body {
 .casestudy-main .casestudy-more-projects {
   display: flex;
   flex-direction: column;
+  width: 75%;
+  margin: 0 auto;
   margin-bottom: 10em;
 }
 .casestudy-main .casestudy-more-projects hr {
@@ -446,7 +436,6 @@ p {
 img {
   height: clamp(200px, 100%, 400px);
   object-fit: cover;
-  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -466,17 +455,15 @@ img {
     height: 75px;
     width: 100%;
     overflow: hidden;
-    background: rgba(111, 87, 84, 0.5);
-    transition: width 0.05s linear;
+    background: #fff;
     z-index: 10;
   }
   .mobile-nav ul {
     display: flex;
+    justify-content: space-between;
   }
   .mobile-nav li {
-    display: block;
-    flex-direction: row;
-    width: 180px;
+    list-style: none;
     font-family: beloved-sans, sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -487,7 +474,7 @@ img {
     justify-content: center;
     color: rgb(77, 52, 49);
     font-size: 1rem;
-    padding: 25px 0;
+    padding: 25px;
   }
   .mobile-nav li a .nav-icon {
     width: 75px;
@@ -495,7 +482,32 @@ img {
     font-size: 30px;
     text-align: center;
   }
-  .row > * {
+  .casestudy-main p {
+    font-size: 85%;
+  }
+  .casestudy-main img {
+    max-height: 200px;
+    width: auto;
+  }
+  .casestudy-main .casestudy-project-process {
+    margin: 0;
+  }
+  .casestudy-main .casestudy-project-process .casestudy-process .body-copy {
+    min-width: 350px;
+  }
+  .casestudy-main .casestudy-project-process .casestudy-process .casestudy-process-images {
+    width: auto;
+  }
+  .casestudy-main .casestudy-more-projects hr {
+    opacity: 0;
+  }
+  .casestudy-main .casestudy-more-projects .more-projects a {
+    border: 1px solid rgb(77, 52, 49);
+    font-size: 0.8em;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
     flex-grow: 0;
     flex-direction: column;
   }

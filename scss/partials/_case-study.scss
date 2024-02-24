@@ -1,11 +1,11 @@
 .casestudy-main {
-    background-color: white;
-    width: 80%;
+    // background-color: white;
+    width: 100%;
 
-    img {
-        border: 1px solid $coffee;
-        box-shadow: 15px 15px 0 $light-pink;
-    }
+    // img {
+    //     border: 1px solid $coffee;
+    //     box-shadow: 15px 15px 0 $light-pink;
+    // }
 
     .casestudy-project-overview {
 
@@ -53,7 +53,7 @@
                 .casestudy-year {
                     display: flex;
                     flex-direction: column;
-                    align-items: end;
+                    align-items: center;
 
                     h3 {
                         font-family: $title;
@@ -76,13 +76,10 @@
         .casestudy-process {
             // background-color: gray;
 
-            .body-copy {
-                background-color: $light-pink;
-                padding: 2em;
-                box-shadow: 15px 15px 0 $coffee;
-            }
-
             p {
+                background-color: #ccc;
+                padding: 2em;
+                // box-shadow: 15px 15px 0 #333;
                 font-family: $body;
                 line-height: 1.5;
             }
@@ -103,7 +100,6 @@
 
         .casestudy-process-images {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
 
@@ -119,6 +115,8 @@
     .casestudy-more-projects {
         display: flex;
         flex-direction: column;
+        width: 75%;
+        margin: 0 auto;
 
         hr {
             height: 3px;

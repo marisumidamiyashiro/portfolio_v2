@@ -1,9 +1,7 @@
 body {
     display: flex;
     justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(90deg, #F88379, $light-pink);
-    grid-template-columns: repeat(12, 1fr);
+    // background: linear-gradient(90deg, #F88379, $light-pink);
 }
 
 .container {
