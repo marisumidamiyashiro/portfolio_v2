@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    max-width: 90%;
+    max-width: 1250px;
     margin: 0 auto;
 }
 
@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
 
     .title {
         display: block;
@@ -31,10 +31,78 @@ body {
         }
 
         h2 {
-            font-family: $body;
+            font-family: $title;
             text-transform: none;
             font-size: clamp(2em, 5vw, 5em);
         }
+    }
+}
+
+.moving-down-arrow {
+    // position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15em auto 0 auto;
+
+    .arrow-down {
+        width: 28px;
+        height: 8px;
+        opacity: 0;
+        transform: scale3d(0.5, 0.5, 0.5);
+        animation: scroll 1.5s ease-out infinite;
+
+        // &:first-child {
+        //     animation: scroll 3s ease-out 1s infinite;
+        // }
+
+        // &:nth-child(2) {
+        //     animation: scroll 3s ease-out 2s infinite;
+        // }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 51%;
+            background: $coffee;
+        }
+
+        &:before {
+            left: 0;
+            transform: skew(0deg, 30deg);
+        }
+
+        &:after {
+            right: 0;
+            width: 50%;
+            transform: skew(0deg, -30deg);
+        }
+    }
+}
+
+@keyframes scroll {
+    25% {
+        opacity: 1;
+
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(45px);
     }
 }
 
@@ -50,5 +118,59 @@ body {
         text-align: center;
         align-items: center;
         margin: 5em auto;
+    }
+}
+
+// ABOUT ME
+
+.about {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid red;
+
+        .about-me {
+            display: flex;
+            align-items: center;
+            border: 1px solid blue;
+            margin: 2em;
+
+            h1 {
+                font-family: $script;
+                color: $coffee;
+                text-transform: none;
+                font-size: clamp(4em, 18vw, 18em);
+            }
+
+            p {
+                font-family: $body;
+                line-height: 1.5;
+            }
+        }
+
+        .button {
+            background-color: #333;
+            padding: 1em 1.5em;
+            margin: 2em;
+
+            a {
+                text-decoration: none;
+                padding: 2em;
+                color: white;
+            }
+        }
+
+        .contact-info {
+
+            h3 {
+                font-family: $body;
+                text-transform: none;
+                font-size: clamp(2em, 3vw, 3em);
+                text-transform: uppercase;
+                margin: 2em auto;
+            }
+        }
     }
 }

@@ -21,7 +21,8 @@ nav li a {
   height: 100%;
   width: 75px;
   overflow: hidden;
-  border-right: 2px solid #ccc;
+  border-right: 2px solid rgb(255, 214, 214);
+  background: rgba(255, 255, 255, 0.5);
   transition: width 0.05s linear;
   z-index: 10;
   padding-top: 15px;
@@ -35,7 +36,7 @@ nav li a {
   font-style: normal;
 }
 .header-nav .site-nav li:hover {
-  background-color: rgb(255, 230, 230);
+  background-color: rgb(255, 214, 214);
 }
 .header-nav .site-nav a {
   text-decoration: none;
@@ -43,13 +44,13 @@ nav li a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: rgb(77, 52, 49);
+  color: #333;
   font-size: 1rem;
   transition: all 0.1s linear;
   padding: 15px 0;
 }
 .header-nav .site-nav a:hover {
-  color: rgb(77, 52, 49);
+  color: #333;
 }
 .header-nav .site-nav a .nav-icon {
   width: 75px;
@@ -68,7 +69,7 @@ nav li a {
 }
 
 .active {
-  background-color: rgb(255, 230, 230);
+  background-color: rgb(255, 214, 214);
 }
 
 .footer-nav {
@@ -78,7 +79,8 @@ nav li a {
   height: 100%;
   width: 75px;
   overflow: hidden;
-  background: rgba(100, 100, 100, 0.5);
+  border-left: 2px solid rgb(255, 214, 214);
+  background: rgba(255, 255, 255, 0.5);
   transition: width 0.05s linear;
   z-index: 10;
   padding-top: 15px;
@@ -93,20 +95,20 @@ nav li a {
 }
 .footer-nav li:hover {
   text-decoration: none;
-  background-color: rgb(255, 230, 230);
+  background-color: rgb(255, 214, 214);
 }
 .footer-nav li a {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: rgb(77, 52, 49);
+  color: #333;
   font-size: 1rem;
   transition: all 0.1s linear;
   padding: 15px 0;
 }
 .footer-nav li a:hover {
-  color: rgb(77, 52, 49);
+  color: #333;
 }
 .footer-nav li a .nav-icon {
   width: 75px;
@@ -125,7 +127,7 @@ nav li a {
 }
 
 .active {
-  background-color: rgb(255, 230, 230);
+  background-color: rgb(255, 214, 214);
 }
 
 .section-title {
@@ -211,7 +213,7 @@ body {
 }
 
 .container {
-  max-width: 90%;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
@@ -219,7 +221,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95vh;
 }
 .hero .title {
   display: block;
@@ -228,17 +230,66 @@ body {
   align-items: center;
 }
 .hero .title h1 {
-  font-family: "handsome-pro", sans-serif;
-  color: rgb(77, 52, 49);
+  font-family: "liebelotte-swell", sans-serif;
+  color: #333;
   text-transform: none;
   font-size: clamp(4em, 18vw, 18em);
 }
 .hero .title h2 {
-  font-family: "new-order", sans-serif;
+  font-family: "the-seasons", sans-serif;
   text-transform: none;
   font-size: clamp(2em, 5vw, 5em);
 }
 
+.moving-down-arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15em auto 0 auto;
+}
+.moving-down-arrow .arrow-down {
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: scroll 1.5s ease-out infinite;
+}
+.moving-down-arrow .arrow-down:before, .moving-down-arrow .arrow-down:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #333;
+}
+.moving-down-arrow .arrow-down:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+.moving-down-arrow .arrow-down:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes scroll {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+}
 .projects {
   display: flex;
   justify-content: center;
@@ -251,6 +302,46 @@ body {
   text-align: center;
   align-items: center;
   margin: 5em auto;
+}
+
+.about .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+}
+.about .container .about-me {
+  display: flex;
+  align-items: center;
+  border: 1px solid blue;
+  margin: 2em;
+}
+.about .container .about-me h1 {
+  font-family: "liebelotte-swell", sans-serif;
+  color: #333;
+  text-transform: none;
+  font-size: clamp(4em, 18vw, 18em);
+}
+.about .container .about-me p {
+  font-family: "apparat-light", sans-serif;
+  line-height: 1.5;
+}
+.about .container .button {
+  background-color: #333;
+  padding: 1em 1.5em;
+  margin: 2em;
+}
+.about .container .button a {
+  text-decoration: none;
+  padding: 2em;
+  color: white;
+}
+.about .container .contact-info h3 {
+  font-family: "apparat-light", sans-serif;
+  text-transform: none;
+  font-size: clamp(2em, 3vw, 3em);
+  text-transform: uppercase;
+  margin: 2em auto;
 }
 
 .casestudy-main {
@@ -266,17 +357,18 @@ body {
   align-items: center;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-title {
-  font-family: "rufina", sans-serif;
-  color: rgb(77, 52, 49);
+  font-family: "the-seasons", sans-serif;
+  color: #333;
   margin-top: 0.5em;
   font-size: clamp(3em, 9vw, 9em);
   text-align: center;
+  text-transform: none;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-hero-image {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 1em;
+  margin: 2em;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-hero-image img {
   height: 600px;
@@ -287,10 +379,10 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 60%;
-  margin: auto;
+  margin: 5em auto;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview p {
-  font-family: "new-order", sans-serif;
+  font-family: "apparat-light", sans-serif;
   line-height: 1.5;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software,
@@ -301,23 +393,42 @@ body {
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software h3,
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year h3 {
-  font-family: "rufina", sans-serif;
+  font-family: "the-seasons", sans-serif;
   font-size: clamp(1em, 2vw, 2em);
   margin-top: 0.5em;
+  text-transform: none;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software span,
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year span {
-  font-family: "new-order", sans-serif;
+  font-family: "apparat-light", sans-serif;
   line-height: 1.5;
+}
+.casestudy-main .casestudy-project-process hr {
+  width: 50%;
+  margin: 5em auto;
+  height: 3px;
+  border-width: 0;
+  background-color: #333;
+}
+.casestudy-main .casestudy-project-process .casestudy-process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .casestudy-main .casestudy-project-process .casestudy-process p {
   background-color: #ccc;
-  padding: 2em;
-  font-family: "new-order", sans-serif;
+  padding: 1em;
+  font-family: "apparat-light", sans-serif;
   line-height: 1.5;
 }
 .casestudy-main .casestudy-project-process .casestudy-process .one-whole {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.casestudy-main .casestudy-project-process .casestudy-process .body-copy {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -328,13 +439,33 @@ body {
 }
 .casestudy-main .casestudy-project-process .casestudy-process-images {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+.casestudy-main .casestudy-project-process .casestudy-process-images .image-collection {
+  display: flex;
+  justify-content: center;
+}
+.casestudy-main .casestudy-project-process .smaller {
+  height: 250px;
+  margin: 0;
+}
 .casestudy-main .casestudy-project-process img {
-  height: 400px;
+  height: 450px;
   max-width: 100%;
   margin: 1em;
+}
+.casestudy-main .casestudy-project-process .caption {
+  display: flex;
+  align-items: center;
+}
+.casestudy-main .casestudy-project-process .caption hr {
+  width: 100px;
+}
+.casestudy-main .casestudy-project-process .caption .image-caption {
+  font-family: "the-seasons", sans-serif;
+  text-transform: capitalize;
 }
 .casestudy-main .casestudy-more-projects {
   display: flex;
@@ -346,7 +477,7 @@ body {
 .casestudy-main .casestudy-more-projects hr {
   height: 3px;
   border-width: 0;
-  background-color: rgb(77, 52, 49);
+  background-color: #333;
 }
 .casestudy-main .casestudy-more-projects .more-projects {
   display: flex;
@@ -354,8 +485,8 @@ body {
 }
 .casestudy-main .casestudy-more-projects .more-projects a {
   text-decoration: none;
-  color: rgb(77, 52, 49);
-  font-family: "rufina", sans-serif;
+  color: #333;
+  font-family: "the-seasons", sans-serif;
   font-size: 2em;
   font-weight: 700;
   line-height: 3;
@@ -365,7 +496,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "new-order", sans-serif;
+  font-family: "apparat-light", sans-serif;
   text-transform: uppercase;
 }
 
@@ -375,12 +506,12 @@ h1 {
 
 h2 {
   font-size: clamp(2em, 10vw, 10em);
-  color: rgb(77, 52, 49);
+  color: #333;
 }
 
 h3 {
   font-size: clamp(1em, 5vw, 5em);
-  color: rgb(77, 52, 49);
+  color: #333;
 }
 
 p {
@@ -400,6 +531,9 @@ p {
 .row > * {
   margin: 1%;
   flex-grow: 1;
+}
+.row .centered {
+  margin: 0 auto;
 }
 .row .one-whole {
   width: 98%;
@@ -472,7 +606,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(77, 52, 49);
+    color: #333;
     font-size: 1rem;
     padding: 25px;
   }
@@ -502,7 +636,7 @@ img {
     opacity: 0;
   }
   .casestudy-main .casestudy-more-projects .more-projects a {
-    border: 1px solid rgb(77, 52, 49);
+    border: 1px solid #333;
     font-size: 0.8em;
   }
   .row {

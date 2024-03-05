@@ -5,7 +5,8 @@
     height: 100%;
     width: 75px;
     overflow: hidden;
-    background: rgba(100, 100, 100, 0.5);
+    border-left: 2px solid $light-pink;
+    background: rgba(255, 255, 255, 0.5);
     transition: width .05s linear;
     z-index: 10;
     padding-top: 15px;

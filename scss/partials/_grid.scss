@@ -14,6 +14,10 @@ $gridgap: 2%;
         flex-grow: 1;
     }
 
+    .centered {
+        margin: 0 auto;
+    }
+
     .one-whole {
         width: 100%-$gridgap;
     }
