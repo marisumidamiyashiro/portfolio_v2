@@ -15,13 +15,14 @@ $sand: rgb(238, 229, 227);
 $coral: #949494;
 $coffee: #333;
 
-// $script: "handsome-pro", sans-serif;
-// $body: "new-order", sans-serif;
-// $title: "rufina", sans-serif;
-
 $script: "liebelotte-swell", sans-serif;
 $body: "apparat-light", sans-serif;
 $title: "the-seasons", sans-serif;
+
+$border-width: 5px;
+
+
+
 
 @import "partials/header";
 @import "partials/footer";

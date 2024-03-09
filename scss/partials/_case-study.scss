@@ -15,7 +15,7 @@
             .casestudy-title {
                 font-family: $title;
                 color: $coffee;
-                margin-top: .5em;
+                margin-top: 1.5em;
                 font-size: clamp(3em, 9vw, 9em);
                 text-align: center;
                 text-transform: none;
@@ -49,7 +49,6 @@
                 .casestudy-year {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
 
                     h3 {
                         font-family: $title;
@@ -70,25 +69,25 @@
 
     .casestudy-project-process {
 
-        hr {
-            width: 50%;
-            margin: 5em auto;
-            height: 3px;
-            border-width: 0;
-            background-color: $coffee;
-        }
+        // hr {
+        //     width: 50%;
+        //     margin: 5em auto;
+        //     height: 3px;
+        //     border-width: 0;
+        //     background-color: $coffee;
+        // }
 
         .casestudy-process {
             // background-color: gray;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 8em auto;
 
 
             p {
-                background-color: #ccc;
+                // background-color: #fff;
                 padding: 1em;
-                // box-shadow: 15px 15px 0 #333;
                 font-family: $body;
                 line-height: 1.5;
             }
@@ -100,6 +99,8 @@
             }
 
             .body-copy {
+                // border: 1px solid #333;
+                // box-shadow: 15px 15px 0 #333;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -141,41 +142,119 @@
             display: flex;
             align-items: center;
 
-            hr {
-                width: 100px;
-            }
-
             .image-caption {
                 font-family: $title;
                 text-transform: capitalize;
+                font-size: clamp(2em, 5vw, 5em);
+            }
+
+            .section-line {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 1em;
+
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: $border-width;
+                    border-bottom: $border-width solid $coffee;
+                    z-index: -1;
+                }
+            }
+
+            .section-line.swapped {
+                flex-direction: row-reverse;
             }
         }
     }
 
     .casestudy-more-projects {
         display: flex;
-        flex-direction: column;
-        width: 75%;
         margin: 0 auto;
 
-        hr {
-            height: 3px;
-            border-width: 0;
-            background-color: $coffee;
-        }
+        .container {
+            width: 800px;
 
-        .more-projects {
-            display: flex;
-            justify-content: space-between;
 
-            a {
-                text-decoration: none;
-                color: $coffee;
-                font-family: $title;
-                font-size: 2em;
-                font-weight: 700;
-                line-height: 3;
-                padding: 1em 3em;
+
+            .more-projects {
+                display: flex;
+                justify-content: space-between;
+
+                .previous-project,
+                .next-project {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: $coral;
+                    font-family: $title;
+                    font-size: 2em;
+                    font-weight: 700;
+                    line-height: 3;
+                    transition: all .3s ease-out;
+
+                    .arrow-left,
+                    .arrow-right {
+                        fill: $coral;
+                    }
+
+                    .top-left-line,
+                    .bottom-left-line,
+                    .top-right-line,
+                    .bottom-right-line {
+                        opacity: 0;
+                        transition: all .2s ease-out;
+                    }
+
+                    .top-left-line,
+                    .bottom-left-line {
+                        transform-origin: left;
+                    }
+
+                    .top-right-line,
+                    .bottom-right-line {
+                        transform-origin: right;
+                    }
+
+                    &:hover {
+                        color: $coffee;
+
+                        .arrow-left,
+                        .arrow-right {
+                            fill: $coffee;
+                        }
+
+                        .top-left-line,
+                        .bottom-left-line,
+                        .top-right-line,
+                        .bottom-right-line {
+                            opacity: 1;
+                        }
+
+                        .top-left-line {
+                            transform: rotate(-45deg);
+                        }
+
+                        .bottom-left-line {
+                            transform: rotate(45deg);
+                        }
+
+                        .top-right-line {
+                            transform: rotate(45deg);
+                        }
+
+                        .bottom-right-line {
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
             }
         }
 

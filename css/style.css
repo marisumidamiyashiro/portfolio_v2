@@ -26,6 +26,9 @@ nav li a {
   transition: width 0.05s linear;
   z-index: 10;
   padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .header-nav .site-nav {
   position: relative;
@@ -53,10 +56,7 @@ nav li a {
   color: #333;
 }
 .header-nav .site-nav a .nav-icon {
-  width: 75px;
-  height: 25px;
-  font-size: 30px;
-  text-align: center;
+  height: 50px;
 }
 .header-nav:hover {
   width: 180px;
@@ -66,10 +66,23 @@ nav li a {
 .nav-text {
   width: 100px;
   height: 25px;
+  padding: 0 15px;
 }
 
 .active {
   background-color: rgb(255, 214, 214);
+}
+
+.vertical-text {
+  position: fixed;
+  bottom: 0;
+  font-family: "the-seasons", sans-serif;
+  font-size: 3em;
+  padding: 0.25em;
+  text-transform: lowercase;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform: rotate(180deg);
 }
 
 .footer-nav {
@@ -111,10 +124,7 @@ nav li a {
   color: #333;
 }
 .footer-nav li a .nav-icon {
-  width: 75px;
-  height: 25px;
-  font-size: 30px;
-  text-align: center;
+  height: 50px;
 }
 .footer-nav:hover {
   width: 180px;
@@ -124,10 +134,23 @@ nav li a {
 .nav-text {
   width: 100px;
   height: 25px;
+  padding: 0 15px;
 }
 
 .active {
   background-color: rgb(255, 214, 214);
+}
+
+.footer-tagline {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-family: "apparat-light", sans-serif;
+  font-size: 1.5em;
+  padding: 1em;
+  text-transform: lowercase;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
 }
 
 .section-title {
@@ -308,12 +331,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
 }
 .about .container .about-me {
   display: flex;
   align-items: center;
-  border: 1px solid blue;
   margin: 2em;
 }
 .about .container .about-me h1 {
@@ -331,17 +352,23 @@ body {
   padding: 1em 1.5em;
   margin: 2em;
 }
+.about .container .button:hover {
+  background-color: #949494;
+}
+.about .container .button:hover a {
+  color: #333;
+}
 .about .container .button a {
   text-decoration: none;
   padding: 2em;
   color: white;
 }
 .about .container .contact-info h3 {
-  font-family: "apparat-light", sans-serif;
+  font-family: "the-seasons", sans-serif;
   text-transform: none;
   font-size: clamp(2em, 3vw, 3em);
-  text-transform: uppercase;
-  margin: 2em auto;
+  text-transform: capitalize;
+  margin: 2em auto 0.5em auto;
 }
 
 .casestudy-main {
@@ -359,7 +386,7 @@ body {
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-title {
   font-family: "the-seasons", sans-serif;
   color: #333;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   font-size: clamp(3em, 9vw, 9em);
   text-align: center;
   text-transform: none;
@@ -389,7 +416,6 @@ body {
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software h3,
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year h3 {
@@ -403,20 +429,13 @@ body {
   font-family: "apparat-light", sans-serif;
   line-height: 1.5;
 }
-.casestudy-main .casestudy-project-process hr {
-  width: 50%;
-  margin: 5em auto;
-  height: 3px;
-  border-width: 0;
-  background-color: #333;
-}
 .casestudy-main .casestudy-project-process .casestudy-process {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 8em auto;
 }
 .casestudy-main .casestudy-project-process .casestudy-process p {
-  background-color: #ccc;
   padding: 1em;
   font-family: "apparat-light", sans-serif;
   line-height: 1.5;
@@ -460,37 +479,99 @@ body {
   display: flex;
   align-items: center;
 }
-.casestudy-main .casestudy-project-process .caption hr {
-  width: 100px;
-}
 .casestudy-main .casestudy-project-process .caption .image-caption {
   font-family: "the-seasons", sans-serif;
   text-transform: capitalize;
+  font-size: clamp(2em, 5vw, 5em);
+}
+.casestudy-main .casestudy-project-process .caption .section-line {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.casestudy-main .casestudy-project-process .caption .section-line:after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  border-bottom: 5px solid #333;
+  z-index: -1;
+}
+.casestudy-main .casestudy-project-process .caption .section-line.swapped {
+  flex-direction: row-reverse;
 }
 .casestudy-main .casestudy-more-projects {
   display: flex;
-  flex-direction: column;
-  width: 75%;
   margin: 0 auto;
   margin-bottom: 10em;
 }
-.casestudy-main .casestudy-more-projects hr {
-  height: 3px;
-  border-width: 0;
-  background-color: #333;
+.casestudy-main .casestudy-more-projects .container {
+  width: 800px;
 }
-.casestudy-main .casestudy-more-projects .more-projects {
+.casestudy-main .casestudy-more-projects .container .more-projects {
   display: flex;
   justify-content: space-between;
 }
-.casestudy-main .casestudy-more-projects .more-projects a {
+.casestudy-main .casestudy-more-projects .container .more-projects .previous-project,
+.casestudy-main .casestudy-more-projects .container .more-projects .next-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: #333;
+  color: #949494;
   font-family: "the-seasons", sans-serif;
   font-size: 2em;
   font-weight: 700;
   line-height: 3;
-  padding: 1em 3em;
+  transition: all 0.3s ease-out;
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a .arrow-left,
+.casestudy-main .casestudy-more-projects .container .more-projects a .arrow-right {
+  fill: #949494;
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a .top-left-line,
+.casestudy-main .casestudy-more-projects .container .more-projects a .bottom-left-line,
+.casestudy-main .casestudy-more-projects .container .more-projects a .top-right-line,
+.casestudy-main .casestudy-more-projects .container .more-projects a .bottom-right-line {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a .top-left-line,
+.casestudy-main .casestudy-more-projects .container .more-projects a .bottom-left-line {
+  transform-origin: left;
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a .top-right-line,
+.casestudy-main .casestudy-more-projects .container .more-projects a .bottom-right-line {
+  transform-origin: right;
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover {
+  color: #333;
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .arrow-left,
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .arrow-right {
+  fill: #333;
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .top-left-line,
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .bottom-left-line,
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .top-right-line,
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .bottom-right-line {
+  opacity: 1;
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .top-left-line {
+  transform: rotate(-45deg);
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .bottom-left-line {
+  transform: rotate(45deg);
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .top-right-line {
+  transform: rotate(45deg);
+}
+.casestudy-main .casestudy-more-projects .container .more-projects a:hover .bottom-right-line {
+  transform: rotate(-45deg);
 }
 
 h1,
@@ -578,7 +659,8 @@ img {
     max-width: 100%;
   }
   .header-nav,
-  .footer-nav {
+  .footer-nav,
+  .footer-tagline {
     position: absolute;
     left: -99999px;
     top: -99999px;
@@ -587,20 +669,18 @@ img {
     position: fixed;
     bottom: 0;
     height: 75px;
-    width: 100%;
     overflow: hidden;
+    width: 100%;
     background: #fff;
     z-index: 10;
   }
   .mobile-nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   .mobile-nav li {
     list-style: none;
-    font-family: beloved-sans, sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    display: block;
   }
   .mobile-nav li a {
     display: flex;
@@ -608,16 +688,14 @@ img {
     justify-content: center;
     color: #333;
     font-size: 1rem;
-    padding: 25px;
+    padding: 10px 50px;
   }
   .mobile-nav li a .nav-icon {
-    width: 75px;
-    height: 25px;
-    font-size: 30px;
-    text-align: center;
+    height: 50px;
   }
   .casestudy-main p {
     font-size: 85%;
+    text-align: center;
   }
   .casestudy-main img {
     max-height: 200px;
@@ -644,6 +722,13 @@ img {
     flex-wrap: wrap;
     flex-grow: 0;
     flex-direction: column;
+  }
+  .row .image-collection {
+    display: flex;
+    flex-direction: column;
+  }
+  .row .image-collection img {
+    margin: 1.5em;
   }
 }
 @media (min-width: 767px) {

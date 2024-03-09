@@ -17,7 +17,8 @@ img {
     // HEADER AND FOOTER NAV
 
     .header-nav,
-    .footer-nav {
+    .footer-nav,
+    .footer-tagline {
         position: absolute;
         left: -99999px;
         top: -99999px;
@@ -27,21 +28,19 @@ img {
         position: fixed;
         bottom: 0;
         height: 75px;
-        width: 100%;
         overflow: hidden;
+        width: 100%;
         background: #fff;
         z-index: 10;
 
         ul {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         li {
             list-style: none;
-            font-family: beloved-sans, sans-serif;
-            font-weight: 700;
-            font-style: normal;
+            display: block;
 
             a {
                 display: flex;
@@ -49,13 +48,10 @@ img {
                 justify-content: center;
                 color: $coffee;
                 font-size: 1rem;
-                padding: 25px;
+                padding: 10px 50px;
 
                 .nav-icon {
-                    width: 75px;
-                    height: 25px;
-                    font-size: 30px;
-                    text-align: center;
+                    height: 50px;
                 }
             }
         }
@@ -67,6 +63,7 @@ img {
 
         p {
             font-size: 85%;
+            text-align: center;
         }
 
         img {
@@ -111,6 +108,15 @@ img {
         flex-wrap: wrap;
         flex-grow: 0;
         flex-direction: column;
+
+        .image-collection {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                margin: 1.5em;
+            }
+        }
 
     }
 }

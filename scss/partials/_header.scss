@@ -23,6 +23,9 @@ nav {
     transition: width .05s linear;
     z-index: 10;
     padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .site-nav {
         position: relative;
@@ -55,10 +58,7 @@ nav {
             }
 
             .nav-icon {
-                width: 75px;
-                height: 25px;
-                font-size: 30px;
-                text-align: center;
+                height: 50px;
             }
         }
     }
@@ -72,8 +72,21 @@ nav {
 .nav-text {
     width: 100px;
     height: 25px;
+    padding: 0 15px;
 }
 
 .active {
     background-color: $light-pink;
+}
+
+.vertical-text {
+    position: fixed;
+    bottom: 0;
+    font-family: $title;
+    font-size: 3em;
+    padding: .25em;
+    text-transform: lowercase;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
 }

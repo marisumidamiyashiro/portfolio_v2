@@ -39,10 +39,7 @@
             }
 
             .nav-icon {
-                width: 75px;
-                height: 25px;
-                font-size: 30px;
-                text-align: center;
+                height: 50px;
             }
         }
     }
@@ -56,8 +53,21 @@
 .nav-text {
     width: 100px;
     height: 25px;
+    padding: 0 15px;
 }
 
 .active {
     background-color: $light-pink;
+}
+
+.footer-tagline {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-family: $body;
+    font-size: 1.5em;
+    padding: 1em;
+    text-transform: lowercase;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
 }
