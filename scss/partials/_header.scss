@@ -31,11 +31,14 @@ nav {
         position: relative;
         display: block;
         width: 180px;
-        font-family: beloved-sans, sans-serif;
+        font-family: $title;
         font-weight: 700;
         font-style: normal;
 
         li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:hover {
                 background-color: $light-pink;
@@ -67,12 +70,6 @@ nav {
         width: 180px;
         overflow: visible;
     }
-}
-
-.nav-text {
-    width: 100px;
-    height: 25px;
-    padding: 0 15px;
 }
 
 .active {

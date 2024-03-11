@@ -18,7 +18,9 @@ img {
 
     .header-nav,
     .footer-nav,
-    .footer-tagline {
+    .footer-tagline,
+    .arrow-left,
+    .arrow-right {
         position: absolute;
         left: -99999px;
         top: -99999px;
@@ -52,6 +54,10 @@ img {
 
                 .nav-icon {
                     height: 50px;
+
+                    img {
+                        object-fit: cover;
+                    }
                 }
             }
         }

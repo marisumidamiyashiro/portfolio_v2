@@ -34,9 +34,14 @@ nav li a {
   position: relative;
   display: block;
   width: 180px;
-  font-family: beloved-sans, sans-serif;
+  font-family: "the-seasons", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+.header-nav .site-nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header-nav .site-nav li:hover {
   background-color: rgb(255, 214, 214);
@@ -61,12 +66,6 @@ nav li a {
 .header-nav:hover {
   width: 180px;
   overflow: visible;
-}
-
-.nav-text {
-  width: 100px;
-  height: 25px;
-  padding: 0 15px;
 }
 
 .active {
@@ -102,7 +101,7 @@ nav li a {
   position: relative;
   display: block;
   width: 180px;
-  font-family: beloved-sans, sans-serif;
+  font-family: "the-seasons", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -244,7 +243,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  height: 75vh;
 }
 .hero .title {
   display: block;
@@ -533,11 +532,14 @@ body {
 .casestudy-main .casestudy-more-projects .container .more-projects a .arrow-right {
   fill: #949494;
 }
+.casestudy-main .casestudy-more-projects .container .more-projects a .top-right-line {
+  fill: blue;
+}
 .casestudy-main .casestudy-more-projects .container .more-projects a .top-left-line,
 .casestudy-main .casestudy-more-projects .container .more-projects a .bottom-left-line,
 .casestudy-main .casestudy-more-projects .container .more-projects a .top-right-line,
 .casestudy-main .casestudy-more-projects .container .more-projects a .bottom-right-line {
-  opacity: 0;
+  opacity: 1;
   transition: all 0.2s ease-out;
 }
 .casestudy-main .casestudy-more-projects .container .more-projects a .top-left-line,
@@ -569,9 +571,12 @@ body {
 }
 .casestudy-main .casestudy-more-projects .container .more-projects a:hover .top-right-line {
   transform: rotate(45deg);
+  transform: translateX(0);
+  fill: red;
 }
 .casestudy-main .casestudy-more-projects .container .more-projects a:hover .bottom-right-line {
   transform: rotate(-45deg);
+  transform: translateX(0);
 }
 
 h1,
@@ -660,7 +665,9 @@ img {
   }
   .header-nav,
   .footer-nav,
-  .footer-tagline {
+  .footer-tagline,
+  .arrow-left,
+  .arrow-right {
     position: absolute;
     left: -99999px;
     top: -99999px;
@@ -692,6 +699,9 @@ img {
   }
   .mobile-nav li a .nav-icon {
     height: 50px;
+  }
+  .mobile-nav li a .nav-icon img {
+    object-fit: cover;
   }
   .casestudy-main p {
     font-size: 85%;
