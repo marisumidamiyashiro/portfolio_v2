@@ -21,9 +21,8 @@ nav li a {
   height: 100%;
   width: 75px;
   overflow: hidden;
-  border-right: 2px solid rgb(255, 214, 214);
   background: rgba(255, 255, 255, 0.5);
-  transition: width 0.05s linear;
+  transition: all 0.5s ease-out;
   z-index: 10;
   padding-top: 15px;
   display: flex;
@@ -42,9 +41,10 @@ nav li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease-out;
 }
 .header-nav .site-nav li:hover {
-  background-color: rgb(255, 214, 214);
+  background-color: #f28466;
 }
 .header-nav .site-nav a {
   text-decoration: none;
@@ -66,6 +66,7 @@ nav li a {
 .header-nav:hover {
   width: 180px;
   overflow: visible;
+  background-color: rgb(255, 214, 214);
 }
 
 .active {
@@ -91,9 +92,8 @@ nav li a {
   height: 100%;
   width: 75px;
   overflow: hidden;
-  border-left: 2px solid rgb(255, 214, 214);
   background: rgba(255, 255, 255, 0.5);
-  transition: width 0.05s linear;
+  transition: all 0.5s ease-out;
   z-index: 10;
   padding-top: 15px;
 }
@@ -104,10 +104,11 @@ nav li a {
   font-family: "the-seasons", sans-serif;
   font-weight: 700;
   font-style: normal;
+  transition: all 0.5s ease-out;
 }
 .footer-nav li:hover {
   text-decoration: none;
-  background-color: rgb(255, 214, 214);
+  background-color: #f28466;
 }
 .footer-nav li a {
   display: flex;
@@ -128,6 +129,7 @@ nav li a {
 .footer-nav:hover {
   width: 180px;
   overflow: visible;
+  background-color: rgb(255, 214, 214);
 }
 
 .nav-text {
@@ -235,27 +237,31 @@ body {
 }
 
 .container {
-  max-width: 1250px;
+  max-width: 1400px;
+  padding: 0 75px;
   margin: 0 auto;
 }
 
 .hero {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
+  min-height: 70svh;
 }
 .hero .title {
   display: block;
   justify-content: center;
   text-align: center;
   align-items: center;
+  padding: 3em 0;
 }
 .hero .title h1 {
   font-family: "liebelotte-swell", sans-serif;
-  color: #333;
+  color: #f28466;
   text-transform: none;
   font-size: clamp(4em, 18vw, 18em);
+  line-height: 1;
 }
 .hero .title h2 {
   font-family: "the-seasons", sans-serif;
@@ -264,11 +270,15 @@ body {
 }
 
 .moving-down-arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15em auto 0 auto;
+  margin: 0 auto 0 auto;
+  transform: translateX(-50%);
 }
 .moving-down-arrow .arrow-down {
   width: 28px;
@@ -352,7 +362,7 @@ body {
   margin: 2em;
 }
 .about .container .button:hover {
-  background-color: #949494;
+  background-color: #f28466;
 }
 .about .container .button:hover a {
   color: #333;
@@ -419,7 +429,7 @@ body {
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software h3,
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year h3 {
   font-family: "the-seasons", sans-serif;
-  font-size: clamp(1em, 2vw, 2em);
+  font-size: clamp(1.5em, 2vw, 2em);
   margin-top: 0.5em;
   text-transform: none;
 }
@@ -432,7 +442,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8em auto;
+  margin: 3em auto;
 }
 .casestudy-main .casestudy-project-process .casestudy-process p {
   padding: 1em;
@@ -449,11 +459,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.casestudy-main .casestudy-project-process .one-whole.casestudy-process-images,
-.casestudy-main .casestudy-project-process .two-thirds.casestudy-process-images {
-  display: flex;
-  flex-wrap: nowrap;
 }
 .casestudy-main .casestudy-project-process .casestudy-process-images {
   display: flex;
@@ -481,7 +486,8 @@ body {
 .casestudy-main .casestudy-project-process .caption .image-caption {
   font-family: "the-seasons", sans-serif;
   text-transform: capitalize;
-  font-size: clamp(2em, 5vw, 5em);
+  font-size: clamp(3em, 5vw, 5em);
+  margin: 1em;
 }
 .casestudy-main .casestudy-project-process .caption .section-line {
   position: relative;
@@ -521,62 +527,88 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #949494;
+  color: #f28466;
   font-family: "the-seasons", sans-serif;
   font-size: 2em;
   font-weight: 700;
   line-height: 3;
   transition: all 0.3s ease-out;
 }
-.casestudy-main .casestudy-more-projects .container .more-projects a .arrow-left,
-.casestudy-main .casestudy-more-projects .container .more-projects a .arrow-right {
-  fill: #949494;
-}
-.casestudy-main .casestudy-more-projects .container .more-projects a .top-right-line {
-  fill: blue;
-}
-.casestudy-main .casestudy-more-projects .container .more-projects a .top-left-line,
-.casestudy-main .casestudy-more-projects .container .more-projects a .bottom-left-line,
-.casestudy-main .casestudy-more-projects .container .more-projects a .top-right-line,
-.casestudy-main .casestudy-more-projects .container .more-projects a .bottom-right-line {
-  opacity: 1;
-  transition: all 0.2s ease-out;
-}
-.casestudy-main .casestudy-more-projects .container .more-projects a .top-left-line,
-.casestudy-main .casestudy-more-projects .container .more-projects a .bottom-left-line {
-  transform-origin: left;
-}
-.casestudy-main .casestudy-more-projects .container .more-projects a .top-right-line,
-.casestudy-main .casestudy-more-projects .container .more-projects a .bottom-right-line {
-  transform-origin: right;
-}
 .casestudy-main .casestudy-more-projects .container .more-projects a:hover {
   color: #333;
 }
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .arrow-left,
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .arrow-right {
-  fill: #333;
+
+.fittree-squares {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .top-left-line,
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .bottom-left-line,
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .top-right-line,
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .bottom-right-line {
-  opacity: 1;
+.fittree-squares :nth-child(1) {
+  background-color: #1A2207;
 }
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .top-left-line {
-  transform: rotate(-45deg);
+.fittree-squares :nth-child(2) {
+  background-color: #1E3F00;
 }
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .bottom-left-line {
-  transform: rotate(45deg);
+.fittree-squares :nth-child(3) {
+  background-color: #465705;
 }
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .top-right-line {
-  transform: rotate(45deg);
-  transform: translateX(0);
-  fill: red;
+.fittree-squares :nth-child(4) {
+  background-color: #75982C;
 }
-.casestudy-main .casestudy-more-projects .container .more-projects a:hover .bottom-right-line {
-  transform: rotate(-45deg);
-  transform: translateX(0);
+.fittree-squares :nth-child(5) {
+  background-color: #D1EAA0;
+}
+.fittree-squares :nth-child(6) {
+  background-color: #E8D3BC;
+}
+.fittree-squares .square {
+  width: 100px;
+  height: 100px;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fittree-squares .square h4 {
+  background-color: transparent;
+  color: white;
+}
+
+.fittree-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fittree-type img {
+  max-height: 100px;
+}
+
+.fittree-images {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.fittree-images img {
+  max-height: 75px;
+}
+
+.fittree-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "apparat-light", sans-serif;
+  font-weight: 700;
+  color: #333;
+  padding: 1.5em;
+  background-color: rgb(255, 214, 214);
+  border-radius: 24px;
+  margin: 0.5em;
+}
+.fittree-button:hover {
+  background-color: #333;
+  color: #f28466;
+  font-style: italic;
 }
 
 h1,
@@ -613,6 +645,9 @@ p {
   justify-content: center;
   align-items: center;
   margin-bottom: 3em;
+}
+.row.swapped {
+  flex-direction: row-reverse;
 }
 .row > * {
   margin: 1%;
@@ -703,6 +738,11 @@ img {
   .mobile-nav li a .nav-icon img {
     object-fit: cover;
   }
+  .container {
+    max-width: 600px;
+    padding: 0;
+    margin: 0;
+  }
   .casestudy-main p {
     font-size: 85%;
     text-align: center;
@@ -711,17 +751,37 @@ img {
     max-height: 200px;
     width: auto;
   }
+  .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview {
+    width: 100%;
+    margin: 2em 0;
+  }
+  .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software,
+  .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year {
+    justify-content: center;
+    text-align: center;
+  }
+  .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software h3,
+  .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year h3 {
+    text-transform: uppercase;
+  }
+  .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software span,
+  .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year span {
+    font-size: 80%;
+  }
   .casestudy-main .casestudy-project-process {
     margin: 0;
+  }
+  .casestudy-main .casestudy-project-process .casestudy-process .section-line {
+    gap: 0;
+  }
+  .casestudy-main .casestudy-project-process .casestudy-process .section-line:after {
+    width: 0;
   }
   .casestudy-main .casestudy-project-process .casestudy-process .body-copy {
     min-width: 350px;
   }
   .casestudy-main .casestudy-project-process .casestudy-process .casestudy-process-images {
     width: auto;
-  }
-  .casestudy-main .casestudy-more-projects hr {
-    opacity: 0;
   }
   .casestudy-main .casestudy-more-projects .more-projects a {
     border: 1px solid #333;
@@ -733,12 +793,24 @@ img {
     flex-grow: 0;
     flex-direction: column;
   }
+  .row .one-half {
+    width: 100%;
+  }
   .row .image-collection {
     display: flex;
     flex-direction: column;
   }
   .row .image-collection img {
     margin: 1.5em;
+  }
+  .fittree-type,
+  .fittree-images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .fittree-type img,
+  .fittree-images img {
+    max-height: 50px;
   }
 }
 @media (min-width: 767px) {

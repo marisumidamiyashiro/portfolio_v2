@@ -5,17 +5,19 @@ body {
 }
 
 .container {
-    max-width: 1250px;
+    max-width: 1400px;
+    padding: 0 75px;
     margin: 0 auto;
 }
 
 // MAIN PAGE 
 
 .hero {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    min-height: 70svh;
     // margin-top: 5em;
 
     .title {
@@ -23,12 +25,14 @@ body {
         justify-content: center;
         text-align: center;
         align-items: center;
+        padding: 3em 0;
 
         h1 {
             font-family: $script;
-            color: $coffee;
+            color: $coral;
             text-transform: none;
             font-size: clamp(4em, 18vw, 18em);
+            line-height: 1;
         }
 
         h2 {
@@ -40,11 +44,15 @@ body {
 }
 
 .moving-down-arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 15em auto 0 auto;
+    margin: 0 auto 0 auto;
+    transform: translateX(-50%);
 
     .arrow-down {
         width: 28px;

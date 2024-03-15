@@ -9,6 +9,10 @@ $gridgap: 2%;
     align-items: center;
     margin-bottom: 3em;
 
+    &.swapped {
+        flex-direction: row-reverse;
+    }
+
     >* {
         margin: ($gridgap / 2);
         flex-grow: 1;
