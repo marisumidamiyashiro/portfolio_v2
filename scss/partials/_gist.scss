@@ -1,0 +1,31 @@
+body {
+    .gist {
+        .gist-file {
+            // border: 1px solid blue !important;
+            border: 1px solid $coffee !important;
+            border-radius: 0;
+
+            // STYLING OF SNIPPET TEXT
+            .gist-data {
+                border-radius: 0;
+                border-bottom: none;
+
+                .blob-num {
+                    background-color: $coffee;
+                    color: $coral;
+                    pointer-events: none;
+                }
+
+                .blob-code {
+                    background-color: $sand;
+                }
+            }
+
+            // HIDE META-DATA AT BOTTOM OF SNIPPET
+            .gist-meta {
+                display: none;
+            }
+        }
+
+    }
+}

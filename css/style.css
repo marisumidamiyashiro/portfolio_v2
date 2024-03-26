@@ -44,7 +44,7 @@ nav li a {
   transition: all 0.5s ease-out;
 }
 .header-nav .site-nav li:hover {
-  background-color: #f28466;
+  background-color: #ffadad;
 }
 .header-nav .site-nav a {
   text-decoration: none;
@@ -108,7 +108,7 @@ nav li a {
 }
 .footer-nav li:hover {
   text-decoration: none;
-  background-color: #f28466;
+  background-color: #ffadad;
 }
 .footer-nav li a {
   display: flex;
@@ -258,7 +258,7 @@ body {
 }
 .hero .title h1 {
   font-family: "liebelotte-swell", sans-serif;
-  color: #f28466;
+  color: #ffadad;
   text-transform: none;
   font-size: clamp(4em, 18vw, 18em);
   line-height: 1;
@@ -362,7 +362,7 @@ body {
   margin: 2em;
 }
 .about .container .button:hover {
-  background-color: #f28466;
+  background-color: #ffadad;
 }
 .about .container .button:hover a {
   color: #333;
@@ -470,6 +470,13 @@ body {
   display: flex;
   justify-content: center;
 }
+.casestudy-main .casestudy-project-process .casestudy-process-videos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .casestudy-main .casestudy-project-process .smaller {
   height: 250px;
   margin: 0;
@@ -527,7 +534,7 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #f28466;
+  color: #ffadad;
   font-family: "the-seasons", sans-serif;
   font-size: 2em;
   font-weight: 700;
@@ -607,8 +614,14 @@ body {
 }
 .fittree-button:hover {
   background-color: #333;
-  color: #f28466;
+  color: #ffadad;
   font-style: italic;
+}
+
+.menu-icon-img {
+  max-height: 300px;
+  object-fit: cover;
+  width: auto;
 }
 
 h1,
@@ -694,6 +707,9 @@ img {
 }
 
 @media (max-width: 767px) {
+  .gist .gist-file {
+    max-width: 300px;
+  }
   img {
     height: 200px;
     max-width: 100%;
@@ -819,4 +835,23 @@ img {
     left: -99999px;
     top: -99999px;
   }
+}
+body .gist .gist-file {
+  border: 1px solid #333 !important;
+  border-radius: 0;
+}
+body .gist .gist-file .gist-data {
+  border-radius: 0;
+  border-bottom: none;
+}
+body .gist .gist-file .gist-data .blob-num {
+  background-color: #333;
+  color: #ffadad;
+  pointer-events: none;
+}
+body .gist .gist-file .gist-data .blob-code {
+  background-color: rgb(238, 229, 227);
+}
+body .gist .gist-file .gist-meta {
+  display: none;
 }

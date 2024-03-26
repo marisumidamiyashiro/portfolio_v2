@@ -7,6 +7,15 @@ img {
 
 @media (max-width: 767px) {
 
+    // GIST SCRIPT
+    .gist {
+        .gist-file {
+            max-width: 300px;
+            // border: 3px solid red !important;
+
+        }
+    }
+
     // IMAGES
 
     img {

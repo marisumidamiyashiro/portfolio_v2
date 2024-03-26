@@ -112,6 +112,14 @@
             }
         }
 
+        .casestudy-process-videos {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         .smaller {
             height: 250px;
             margin: 0;
@@ -281,4 +289,13 @@
         color: $coral;
         font-style: italic;
     }
+}
+
+// MENU ICON
+
+.menu-icon-img {
+    max-height: 300px;
+    object-fit: cover;
+    width: auto;
+    // border: 3px solid red;
 }

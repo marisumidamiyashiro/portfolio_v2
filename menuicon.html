@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Icon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/muz4avn.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dmm1cpy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header-nav">
+        <nav class="site-nav">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="images/house.svg" alt="" class="nav-icon">
+                        <span class="nav-text">home</span></a>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#projects">
+                        <img src="images/work.svg" alt="" class="nav-icon">
+                        <span class="nav-text">projects</span></a>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="vertical-text">mari&nbspseymour</h3>
+    </header>
+    <main class="casestudy-main">
+        <section class="casestudy-project-overview">
+            <div class="container">
+                <div class="casestudy-hero">
+                    <h1 class="casestudy-title">Menu Icon</h1>
+                    <div class="row casestudy-overview">
+                        <div class="two-thirds">
+                            <p>
+                                Creating a 3-bar navigation icon may seem like a simple task, but there are multiple
+                                ways to implement it on your website. I opted to provide a straightforward method by
+                                offering code that is modular and reusable for your own projects. I utilized the
+                                details/summary HTML element to create an overlay menu without the need for JavaScript.
+                                After finishing the examples, I copied and pasted my HTML and CSS code into a mockup,
+                                then incorporated JavaScript to demonstrate how effortlessly you can add this feature to
+                                your&nbspprojects.
+                            </p>
+                        </div>
+                        <div class="one-third casestudy-details">
+                            <div class="casestudy-software">
+                                <h3>software</h3>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="casestudy-year">
+                                <h3>year</h3>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="casestudy-project-process">
+            <div class="container">
+                <div class="row casestudy-process caption">
+                    <h3 class="one-whole image-caption section-line">ideation</h3>
+                    <div class="one-third body-copy">
+                        <p>I began by creating a basic menu icon without any animations, but would still effectively
+                            open and close an overlay navigation menu. This was achieved within the "summary"
+                            element
+                            using an&nbspsvg.
+                        </p>
+                    </div>
+                    <div class="one-third casestudy-process-videos">
+                        <video src="images/menu-icon/basic-no_animation.mp4" autoplay loop muted width="300px"></video>
+                    </div>
+                    <div class="one-whole casestudy-process-images">
+                        <script
+                            src="https://gist.github.com/marisumidamiyashiro/e689bbfe90177d2e62ec45370ef19316.js"></script>
+                    </div>
+                </div>
+                <div class="row casestudy-process caption">
+                    <h3 class="one-whole image-caption section-line swapped">simple&nbspanimation</h3>
+                    <div class="one-third casestudy-process-videos">
+                        <video src="images/menu-icon/simple-animation.mp4" autoplay loop muted width="300px"></video>
+                    </div>
+                    <div class="one-third body-copy">
+                        <p>
+                            After creating the base for the menu icon, I needed to learn how to select each svg
+                            element
+                            for it's open and closing animations. This was done using the [open] selector. I also
+                            learned that using the "transform-origin" property would later assist with easily
+                            changing
+                            the animation&nbspkeyframes.
+                        </p>
+                    </div>
+                    <div class="one-whole casestudy-process-images">
+                        <script
+                            src="https://gist.github.com/marisumidamiyashiro/efe18a3dfae5a497a52deb8910e412ea.js"></script>
+                    </div>
+                </div>
+                <div class="row casestudy-process caption">
+                    <h3 class="one-whole image-caption section-line">squish&nbspanimation</h3>
+                    <div class="one-third body-copy">
+                        <p>
+                            Building on the first two steps I felt more confident in creating keyframe animations for
+                            more eye-catching effects when clicking on the menu icon. I started with a simple "squish"
+                            animation that brought all rectangles to the center and opened into the "x" and then
+                            reversed the process, transforming the "x" back into the three bars.
+                        </p>
+                    </div>
+                    <div class="one-third casestudy-process-videos">
+                        <video src="images/menu-icon/squish-animation.mp4" autoplay loop muted width="300px"></video>
+                    </div>
+                    <div class="one-whole casestudy-process-images">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer-nav">
+        <nav class="site-nav">
+            <ul>
+                <li>
+                    <a href="aboutme.html">
+                        <img src="images/info.svg" alt="" class="nav-icon">
+                        <span class="nav-text">about&nbspme</span></a>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <span class="footer-tagline">creativity knows no limits</span>
+    </footer>
+    <footer class="mobile-nav">
+        <nav class="site-nav">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="images/house.svg" alt="" class="nav-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#projects">
+                        <img src="images/work.svg" alt="" class="nav-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="aboutme.html">
+                        <img src="images/info.svg" alt="" class="nav-icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
