@@ -300,6 +300,83 @@
     // border: 3px solid red;
 }
 
+// THE MOON
+
+.themoon {
+    display: flex;
+    flex-direction: column;
+
+    .circle {
+        background-color: $coffee;
+        border: 1px solid $coffee;
+        margin: 2em;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+
+    // :nth-child(1) {
+    //     border: 1px solid red;
+    // }
+
+    :nth-child(2) {
+        box-shadow: inset -20px 0 0 0 #fff;
+    }
+
+    :nth-child(3) {
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: white;
+            border-radius: 0 100% 100% 0;
+        }
+    }
+
+    :nth-child(4) {
+        background: white;
+        box-shadow: inset 20px 0 0 0 $coffee;
+    }
+
+    :nth-child(5) {
+        background: white;
+    }
+
+    :nth-child(6) {
+        transform: rotate(180deg);
+        background: white;
+        box-shadow: inset 20px 0 0 0 $coffee;
+    }
+
+    :nth-child(7) {
+        transform: rotate(180deg);
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: white;
+            border-radius: 0 100% 100% 0;
+        }
+    }
+
+    :nth-child(8) {
+        transform: rotate(180deg);
+        box-shadow: inset -20px 0 0 0 #fff;
+    }
+}
+
 // BUTTONS
 
 .casestudy-process {
