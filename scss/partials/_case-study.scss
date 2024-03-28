@@ -133,20 +133,20 @@
 
         .caption {
             display: flex;
-            align-items: center;
+            align-items: start;
 
             .image-caption {
                 font-family: $title;
                 text-transform: capitalize;
-                font-size: clamp(3em, 5vw, 5em);
-                margin: 1em;
+                font-size: clamp(2em, 5vw, 5em);
+                margin: .5em;
             }
 
             .section-line {
                 position: relative;
                 display: flex;
                 align-items: center;
-                gap: 1em;
+                gap: .5em;
 
                 &:after {
                     content: '';
@@ -298,4 +298,22 @@
     object-fit: cover;
     width: auto;
     // border: 3px solid red;
+}
+
+// BUTTONS
+
+.casestudy-process {
+    .button {
+        text-decoration: none;
+        padding: 1em 1.5em;
+        margin: .5em;
+        background-color: $coffee;
+        color: $light-pink;
+        transition: all .3s ease-out;
+
+        &:hover {
+            background-color: $light-pink;
+            color: $coffee;
+        }
+    }
 }

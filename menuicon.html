@@ -74,7 +74,7 @@
                         <p>I began by creating a basic menu icon without any animations, but would still effectively
                             open and close an overlay navigation menu. This was achieved within the "summary"
                             element
-                            using an&nbspsvg.
+                            using&nbspan&nbspsvg.
                         </p>
                     </div>
                     <div class="one-third casestudy-process-videos">
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <div class="row casestudy-process caption">
-                    <h3 class="one-whole image-caption section-line swapped">simple&nbspanimation</h3>
+                    <h3 class="one-whole image-caption section-line swapped">simple animation</h3>
                     <div class="one-third casestudy-process-videos">
                         <video src="images/menu-icon/simple-animation.mp4" autoplay loop muted width="300px"></video>
                     </div>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div class="row casestudy-process caption">
-                    <h3 class="one-whole image-caption section-line">squish&nbspanimation</h3>
+                    <h3 class="one-whole image-caption section-line">squish animation</h3>
                     <div class="one-third body-copy">
                         <p>
                             Building on the first two steps I felt more confident in creating keyframe animations for
@@ -119,12 +119,96 @@
                         <video src="images/menu-icon/squish-animation.mp4" autoplay loop muted width="300px"></video>
                     </div>
                     <div class="one-whole casestudy-process-images">
-
+                        <script
+                            src="https://gist.github.com/marisumidamiyashiro/a0f9c86c81c07c1211560e9dea4b8173.js"></script>
+                    </div>
+                </div>
+                <div class="row casestudy-process caption">
+                    <h3 class="one-whole image-caption section-line swapped">Plus to X Animation</h3>
+                    <div class="one-third casestudy-process-videos">
+                        <video src="images/menu-icon/plus-to-x.mp4" autoplay loop muted width="300px"></video>
+                    </div>
+                    <div class="one-third body-copy">
+                        <p>
+                            For my next attempt at keyframe animations, I incorporated a series of additional steps to
+                            create a more intricate and visually engaging effect. This involved creating a plus sign
+                            that rotated into the "x" and, again, reversed the process back into the three bars. This
+                            proved to be a much more difficult task as I needed to understand th4e timing at each
+                            percentage within the keyframe. Finding the right balance was crucial, ensuring that the
+                            rotation into the "x" was neither too quick to preserve the effect, nor too slow to maintain
+                            its visual appeal.
+                        </p>
+                    </div>
+                    <div class="one-whole casestudy-process-images">
+                        <script
+                            src="https://gist.github.com/marisumidamiyashiro/64c92520252d4559d48c7ee6d0f0d1e1.js"></script>
+                    </div>
+                </div>
+                <div class="row casestudy-process caption">
+                    <h3 class="one-whole image-caption section-line">separated animation</h3>
+                    <div class="one-third body-copy">
+                        <p>
+                            In my final exploration for this project, I created a more involved menu icon using six
+                            rectangles within the svg. This demanded meticulous attention to detail and a considerable
+                            amount of patience. I wanted this menu icon to have the top and bottom bars tilt towards the
+                            center, forming the "x", while the center bar splits in half and fades outwards. The first
+                            few iterations of this icon did not have the transform-origin selector, so each keyframe had
+                            been different. This meant that reversing the animation had completely different translate
+                            and rotation properties. After learning that I could specify the top left and top right of
+                            each rectangle, I could easily animate the open and close animations.
+                        </p>
+                    </div>
+                    <div class="one-third casestudy-process-videos">
+                        <video src="images/menu-icon/separated.mp4" autoplay loop muted width="300px"></video>
+                    </div>
+                    <div class="one-whole casestudy-process-images">
+                        <script
+                            src="https://gist.github.com/marisumidamiyashiro/5d151e03ce59136b7baa177e61d41315.js"></script>
+                    </div>
+                    <div class="row casestudy-process caption">
+                        <h3 class="one-whole image-caption section-line swapped">design</h3>
+                        <div class="one-whole body-copy">
+                            <p>Having completed a variety of menu icons and a range of animations, my last objective was
+                                to ensure their seamless integration into websites for potential users. To achieve this,
+                                I conducted tests with JavaScript to understand the process of applying the code used to
+                                generate the icon. I initially utilized CodePens and eventually learned to select the
+                                "open" and "closed" navigation states to assign the animations. After doing this I
+                                created a mockup of the current NMA website and implemented my menu icon. You can view
+                                all the CodePens and the website mockup using the links&nbspbelow.</p>
+                            <a href="https://codepen.io/collection/gYBVbN" class="button">Complete CodePen
+                                Collection</a>
+                            <a href="https://marisumidamiyashiro.github.io/nma-website-mockup-v2/" class="button">NMA
+                                Website Mockup</a>
+                            <a href="https://github.com/marisumidamiyashiro/nma-website-mockup-v2?tab=readme-ov-file"
+                                class="button">GitHub Repo for Mockup</a>
+                        </div>
+                        <p class="codepen" data-height="500" data-slug-hash="wvNQgPX" data-user="marisumidamiyashiro">
+                            <span>See the Pen <a href="https://codepen.io/marisumidamiyashiro/pen/wvNQgPX">
+                                    nma-sitenav-togglenav with details summary (all animations)</a> by Mari Sumida
+                                Miyashiro (<a href="https://codepen.io/marisumidamiyashiro">@marisumidamiyashiro</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+                </div>
+        </section>
+        <section class="casestudy-more-projects">
+            <div class="container">
+                <div class="more-projects">
+                    <div class="previous-project">
+                        <a href="fittree.html">
+                            <span class="fill-left">previous&nbspproject</span>
+                        </a>
+                    </div>
+                    <div class="next-project">
+                        <a href="themoon.html">
+                            <span class="fill-right">next&nbspproject</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
 
+        </section>
     </main>
     <footer class="footer-nav">
         <nav class="site-nav">

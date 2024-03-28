@@ -357,20 +357,17 @@ body {
   line-height: 1.5;
 }
 .about .container .button {
-  background-color: #333;
-  padding: 1em 1.5em;
-  margin: 2em;
-}
-.about .container .button:hover {
-  background-color: #ffadad;
-}
-.about .container .button:hover a {
-  color: #333;
-}
-.about .container .button a {
   text-decoration: none;
   padding: 2em;
   color: white;
+  background-color: #333;
+  padding: 1em 1.5em;
+  margin: 2em;
+  transition: all 0.3s ease-out;
+}
+.about .container .button:hover {
+  background-color: #ffadad;
+  color: #333;
 }
 .about .container .contact-info h3 {
   font-family: "the-seasons", sans-serif;
@@ -488,19 +485,19 @@ body {
 }
 .casestudy-main .casestudy-project-process .caption {
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 .casestudy-main .casestudy-project-process .caption .image-caption {
   font-family: "the-seasons", sans-serif;
   text-transform: capitalize;
-  font-size: clamp(3em, 5vw, 5em);
-  margin: 1em;
+  font-size: clamp(2em, 5vw, 5em);
+  margin: 0.5em;
 }
 .casestudy-main .casestudy-project-process .caption .section-line {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
 }
 .casestudy-main .casestudy-project-process .caption .section-line:after {
   content: "";
@@ -624,6 +621,19 @@ body {
   width: auto;
 }
 
+.casestudy-process .button {
+  text-decoration: none;
+  padding: 1em 1.5em;
+  margin: 0.5em;
+  background-color: #333;
+  color: rgb(255, 214, 214);
+  transition: all 0.3s ease-out;
+}
+.casestudy-process .button:hover {
+  background-color: rgb(255, 214, 214);
+  color: #333;
+}
+
 h1,
 h2,
 h3 {
@@ -710,7 +720,8 @@ img {
   .gist .gist-file {
     max-width: 300px;
   }
-  img {
+  img,
+  video {
     height: 200px;
     max-width: 100%;
   }
@@ -787,6 +798,12 @@ img {
   .casestudy-main .casestudy-project-process {
     margin: 0;
   }
+  .casestudy-main .casestudy-project-process .caption {
+    align-items: center;
+  }
+  .casestudy-main .casestudy-project-process .caption .image-caption {
+    margin: 0;
+  }
   .casestudy-main .casestudy-project-process .casestudy-process .section-line {
     gap: 0;
   }
@@ -796,12 +813,22 @@ img {
   .casestudy-main .casestudy-project-process .casestudy-process .body-copy {
     min-width: 350px;
   }
-  .casestudy-main .casestudy-project-process .casestudy-process .casestudy-process-images {
+  .casestudy-main .casestudy-project-process .casestudy-process .casestudy-process-images,
+  .casestudy-main .casestudy-project-process .casestudy-process .casestudy-process-videos {
     width: auto;
+  }
+  .casestudy-main .casestudy-more-projects {
+    max-width: 300px;
+  }
+  .casestudy-main .casestudy-more-projects .more-projects .previous-project,
+  .casestudy-main .casestudy-more-projects .more-projects .next-project {
+    padding: 1em;
   }
   .casestudy-main .casestudy-more-projects .more-projects a {
     border: 1px solid #333;
-    font-size: 0.8em;
+  }
+  .casestudy-main .casestudy-more-projects .more-projects span {
+    font-size: 75%;
   }
   .row {
     display: flex;
@@ -837,6 +864,7 @@ img {
   }
 }
 body .gist .gist-file {
+  margin: 1em;
   border: 1px solid #333 !important;
   border-radius: 0;
 }
@@ -850,6 +878,7 @@ body .gist .gist-file .gist-data .blob-num {
   pointer-events: none;
 }
 body .gist .gist-file .gist-data .blob-code {
+  font-size: 105%;
   background-color: rgb(238, 229, 227);
 }
 body .gist .gist-file .gist-meta {

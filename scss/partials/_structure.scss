@@ -151,23 +151,19 @@ body {
         }
 
         .button {
+            text-decoration: none;
+            padding: 2em;
+            color: white;
             background-color: #333;
             padding: 1em 1.5em;
             margin: 2em;
+            transition: all .3s ease-out;
 
             &:hover {
                 background-color: $coral;
-
-                a {
-                    color: #333;
-                }
+                color: #333;
             }
 
-            a {
-                text-decoration: none;
-                padding: 2em;
-                color: white;
-            }
         }
 
         .contact-info {

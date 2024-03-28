@@ -18,7 +18,8 @@ img {
 
     // IMAGES
 
-    img {
+    img,
+    video {
         height: 200px;
         max-width: 100%;
     }
@@ -122,6 +123,14 @@ img {
         .casestudy-project-process {
             margin: 0;
 
+            .caption {
+                align-items: center;
+
+                .image-caption {
+                    margin: 0;
+                }
+            }
+
             .casestudy-process {
 
                 .section-line {
@@ -136,19 +145,29 @@ img {
                     min-width: 350px;
                 }
 
-                .casestudy-process-images {
+                .casestudy-process-images,
+                .casestudy-process-videos {
                     width: auto;
                 }
             }
         }
 
         .casestudy-more-projects {
+            max-width: 300px;
 
             .more-projects {
 
+                .previous-project,
+                .next-project {
+                    padding: 1em;
+                }
+
                 a {
                     border: 1px solid $coffee;
-                    font-size: .8em;
+                }
+
+                span {
+                    font-size: 75%;
                 }
             }
 

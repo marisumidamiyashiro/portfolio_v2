@@ -2,6 +2,7 @@ body {
     .gist {
         .gist-file {
             // border: 1px solid blue !important;
+            margin: 1em;
             border: 1px solid $coffee !important;
             border-radius: 0;
 
@@ -17,6 +18,7 @@ body {
                 }
 
                 .blob-code {
+                    font-size: 105%;
                     background-color: $sand;
                 }
             }
