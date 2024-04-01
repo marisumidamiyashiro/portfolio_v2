@@ -212,6 +212,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    font-family: $body;
 
     :nth-child(1) {
         background-color: #1A2207;
@@ -374,6 +375,63 @@
     :nth-child(8) {
         transform: rotate(180deg);
         box-shadow: inset -20px 0 0 0 #fff;
+    }
+}
+
+// QUEST 
+
+.quest-squares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: $body;
+
+    :nth-child(1) {
+        background-color: #000000;
+        color: white;
+    }
+
+    :nth-child(2) {
+        background-color: #00AD95;
+    }
+
+    :nth-child(3) {
+        background-color: #FAAC72;
+    }
+
+    :nth-child(4) {
+        background-color: #E6E6E6;
+    }
+
+    :nth-child(5) {
+        background-color: #81298E;
+    }
+
+    :nth-child(6) {
+        background-color: #ACD037;
+    }
+
+    :nth-child(7) {
+        background-color: #F1607D;
+    }
+
+    :nth-child(8) {
+        background-color: #EFE128;
+    }
+
+    .square {
+        width: 100px;
+        height: 100px;
+        margin: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+            background-color: transparent;
+            color: white;
+        }
     }
 }
 

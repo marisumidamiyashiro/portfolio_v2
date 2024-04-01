@@ -154,16 +154,20 @@ img {
 
         .casestudy-more-projects {
             max-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .more-projects {
 
                 .previous-project,
                 .next-project {
-                    padding: 1em;
+                    padding: .5em;
                 }
 
                 a {
                     border: 1px solid $coffee;
+                    padding: .5em;
                 }
 
                 span {
