@@ -124,6 +124,8 @@ body {
 
 .about {
 
+    margin-bottom: 10em;
+
     .container {
         display: flex;
         flex-direction: column;
@@ -166,6 +168,8 @@ body {
         }
 
         .contact-info {
+            display: flex;
+            flex-direction: column;
 
             h3 {
                 font-family: $title;
@@ -173,6 +177,15 @@ body {
                 font-size: clamp(2em, 3vw, 3em);
                 text-transform: capitalize;
                 margin: 2em auto .5em auto;
+            }
+
+            span {
+                font-family: $body;
+            }
+
+            a {
+                text-decoration: none;
+                font-family: $body;
             }
         }
     }

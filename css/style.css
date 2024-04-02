@@ -337,6 +337,9 @@ body {
   margin: 5em auto;
 }
 
+.about {
+  margin-bottom: 10em;
+}
 .about .container {
   display: flex;
   flex-direction: column;
@@ -370,12 +373,23 @@ body {
   background-color: #ffadad;
   color: #333;
 }
+.about .container .contact-info {
+  display: flex;
+  flex-direction: column;
+}
 .about .container .contact-info h3 {
   font-family: "the-seasons", sans-serif;
   text-transform: none;
   font-size: clamp(2em, 3vw, 3em);
   text-transform: capitalize;
   margin: 2em auto 0.5em auto;
+}
+.about .container .contact-info span {
+  font-family: "apparat-light", sans-serif;
+}
+.about .container .contact-info a {
+  text-decoration: none;
+  font-family: "apparat-light", sans-serif;
 }
 
 .casestudy-main {
