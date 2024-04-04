@@ -255,12 +255,13 @@
 
 .fittree-type {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
     justify-content: center;
 
     img {
-        max-height: 100px;
+        max-height: 50px;
+        margin: .5em;
     }
 }
 
@@ -432,6 +433,15 @@
             background-color: transparent;
             color: white;
         }
+    }
+}
+
+.quest-images {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        max-height: 75px;
     }
 }
 

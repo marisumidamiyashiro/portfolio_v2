@@ -517,8 +517,8 @@ body {
 .casestudy-main .casestudy-project-process .caption .section-line:after {
   content: "";
   width: 100%;
-  height: 5px;
-  border-bottom: 5px solid #333;
+  height: 2px;
+  border-bottom: 2px solid #333;
   z-index: -1;
 }
 .casestudy-main .casestudy-project-process .caption .section-line.swapped {
@@ -597,12 +597,12 @@ body {
 
 .fittree-type {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .fittree-type img {
-  max-height: 100px;
+  max-height: 50px;
+  margin: 0.5em;
 }
 
 .fittree-images {
@@ -741,6 +741,14 @@ body {
 .quest-squares .square h4 {
   background-color: transparent;
   color: white;
+}
+
+.quest-images {
+  display: flex;
+  flex-direction: column;
+}
+.quest-images img {
+  max-height: 75px;
 }
 
 .casestudy-process .button {
