@@ -7,10 +7,11 @@
     <title>FitTree Mobile App</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/muz4avn.css">
+    <!-- ADOBE FONTS -->
     <link rel="stylesheet" href="https://use.typekit.net/dmm1cpy.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -40,6 +41,9 @@
                 <div class="casestudy-hero">
                     <h1 class="casestudy-title">FitTree Mobile App</h1>
                     <div class="row casestudy-overview">
+                        <div class="one-whole casestudy-hero-image">
+                            <img src="images/fit-tree/fittree-mockup_v1.jpg" alt="">
+                        </div>
                         <div class="two-thirds">
                             <p>FitTree is a fictional fitness app that allows you to cultivate a virtual garden while
                                 offering users the option to subscribe and plant real trees worldwide. This app
@@ -111,7 +115,7 @@
                         </div>
                     </div>
                     <div class="one-whole casestudy-process-images">
-                        <div class="fittree-type ">
+                        <div class="fittree-type fittree-images">
                             <img src="images/fit-tree/type-brevia.png" alt="">
                             <img src="images/fit-tree/type-feltro.png" alt="">
                             <img src="images/fit-tree/type-rinse.png" alt="">
@@ -122,13 +126,32 @@
                     <h3 class="one-whole image-caption section-line">
                         the&nbspplants</h3>
                     <div class="one-whole casestudy-process-images fittree-images">
-                        <img src="images/fit-tree/rose-pink.png" alt="">
-                        <img src="images/fit-tree/rose-red.png" alt="">
-                        <img src="images/fit-tree/daisy.png" alt="">
-                        <img src="images/fit-tree/bush-blueflower.png" alt="">
-                        <img src="images/fit-tree/bush-pinkflower.png" alt="">
-                        <img src="images/fit-tree/bush-leaves.png" alt="">
-                        <img src="images/fit-tree/tree-pine.png" alt="">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/fit-tree/rose-pink.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/fit-tree/rose-red.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/fit-tree/daisy.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/fit-tree/bush-blueflower.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/fit-tree/bush-pinkflower.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/fit-tree/bush-leaves.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/fit-tree/tree-pine.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="row casestudy-process caption">
@@ -209,6 +232,11 @@
             </ul>
         </nav>
     </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
