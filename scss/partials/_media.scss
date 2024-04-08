@@ -16,6 +16,11 @@ img {
         }
     }
 
+    .swiper {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
     // IMAGES
 
     img,
@@ -93,6 +98,7 @@ img {
         img {
             max-height: 200px;
             width: auto;
+            box-shadow: none;
         }
 
         .casestudy-project-overview {

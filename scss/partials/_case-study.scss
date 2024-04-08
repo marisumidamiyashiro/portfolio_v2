@@ -2,6 +2,11 @@
 
     width: 100%;
 
+    img {
+        border: .25px solid rgba(88, 88, 88, 0.7);
+        box-shadow: 10px 5px 10px rgba(88, 88, 88, 0.7);
+    }
+
     .casestudy-project-overview {
 
         margin-bottom: 10em;
@@ -25,10 +30,9 @@
                 display: flex;
                 justify-content: center;
                 width: 100%;
-                margin: 2em;
 
                 img {
-                    height: 600px;
+                    height: 700px;
                 }
             }
 
@@ -126,7 +130,7 @@
         }
 
         img {
-            height: 450px;
+            // height: 450px;
             max-width: 100%;
             margin: 1em;
         }
@@ -436,13 +440,8 @@
     }
 }
 
-.quest-images {
-    display: flex;
-    flex-direction: column;
-
-    img {
-        max-height: 75px;
-    }
+.quest-logo {
+    max-height: 300px;
 }
 
 // BUTTONS
