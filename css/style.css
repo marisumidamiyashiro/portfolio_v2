@@ -22,7 +22,7 @@ nav li a {
   width: 75px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
   z-index: 10;
   padding-top: 15px;
   display: flex;
@@ -41,7 +41,7 @@ nav li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out 0.2s;
 }
 .header-nav .site-nav li:hover {
   background-color: #ffadad;
@@ -66,7 +66,7 @@ nav li a {
 .header-nav:hover {
   width: 180px;
   overflow: visible;
-  background-color: rgb(255, 214, 214);
+  background-color: rgb(238, 229, 227);
 }
 
 .active {
@@ -94,7 +94,7 @@ nav li a {
   width: 75px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
   z-index: 10;
   padding-top: 15px;
 }
@@ -105,7 +105,7 @@ nav li a {
   font-family: "the-seasons", sans-serif;
   font-weight: 700;
   font-style: normal;
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out 0.2s;
 }
 .footer-nav li:hover {
   text-decoration: none;
@@ -130,7 +130,7 @@ nav li a {
 .footer-nav:hover {
   width: 180px;
   overflow: visible;
-  background-color: rgb(255, 214, 214);
+  background-color: rgb(238, 229, 227);
 }
 
 .nav-text {
@@ -469,7 +469,7 @@ body {
   margin: 3em auto;
 }
 .casestudy-main .casestudy-project-process .casestudy-process p {
-  padding: 1em;
+  padding-bottom: 0.9em;
   font-family: "apparat-light", sans-serif;
   line-height: 1.5;
 }
@@ -483,6 +483,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.casestudy-main .casestudy-project-process .casestudy-process .body-copy h4 {
+  line-height: 1.5;
 }
 .casestudy-main .casestudy-project-process .casestudy-process-images {
   display: flex;
@@ -796,7 +799,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "apparat-light", sans-serif;
   text-transform: uppercase;
 }
@@ -813,6 +817,11 @@ h2 {
 h3 {
   font-size: clamp(1em, 5vw, 5em);
   color: #333;
+}
+
+h4 {
+  font-size: clamp(0.8em, 1vw, 1em);
+  color: black;
 }
 
 p {

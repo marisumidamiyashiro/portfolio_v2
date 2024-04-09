@@ -1,6 +1,7 @@
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: $body;
     text-transform: uppercase;
 }
@@ -17,6 +18,11 @@ h2 {
 h3 {
     font-size: clamp(1em, 5vw, 5em);
     color: $coffee;
+}
+
+h4 {
+    font-size: clamp(.8em, 1vw, 1em);
+    color: black;
 }
 
 p {

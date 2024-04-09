@@ -7,7 +7,7 @@
     overflow: hidden;
     // border-left: 2px solid $light-pink;
     background: rgba(255, 255, 255, 0.5);
-    transition: all .5s ease-out;
+    transition: all .3s ease-out;
     z-index: 10;
     padding-top: 15px;
 
@@ -18,7 +18,7 @@
         font-family: $title;
         font-weight: 700;
         font-style: normal;
-        transition: all .5s ease-out;
+        transition: all .2s ease-out .2s;
 
         &:hover {
             text-decoration: none;
@@ -48,7 +48,7 @@
     &:hover {
         width: 180px;
         overflow: visible;
-        background-color: $light-pink;
+        background-color: $sand;
     }
 }
 

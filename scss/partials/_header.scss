@@ -20,7 +20,7 @@ nav {
     overflow: hidden;
     // border-right: 2px solid $light-pink;
     background: rgba(255, 255, 255, 0.5);
-    transition: all .5s ease-out;
+    transition: all .3s ease-out;
     z-index: 10;
     padding-top: 15px;
     display: flex;
@@ -39,7 +39,7 @@ nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all .5s ease-out;
+            transition: all .2s ease-out .2s;
 
             &:hover {
                 background-color: $coral;
@@ -70,7 +70,7 @@ nav {
     &:hover {
         width: 180px;
         overflow: visible;
-        background-color: $light-pink;
+        background-color: $sand;
     }
 }
 
