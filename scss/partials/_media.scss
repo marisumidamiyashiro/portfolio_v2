@@ -82,6 +82,22 @@ img {
         }
     }
 
+    .caption {
+        align-items: center;
+        justify-content: center;
+
+        .section-line {
+            justify-content: center;
+        }
+    }
+
+    .code-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: none;
+    }
+
     // CONTAINER
 
     .container {
@@ -218,6 +234,10 @@ img {
         img {
             max-height: 50px;
         }
+    }
+
+    .illustrations-images {
+        flex-direction: column;
     }
 }
 
