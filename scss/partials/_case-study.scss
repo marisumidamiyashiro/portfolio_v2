@@ -4,8 +4,8 @@
 
     img,
     video {
-        border: .25px solid rgba(88, 88, 88, 0.7);
-        box-shadow: 10px 5px 10px rgba(88, 88, 88, 0.7);
+        // border: .25px solid rgba(88, 88, 88, 0.7);
+        box-shadow: 5px 5px 5px rgba(88, 88, 88, 0.7);
     }
 
     .casestudy-project-overview {
@@ -87,7 +87,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 3em auto;
+            margin-top: 3em;
+            margin-bottom: 3em;
 
             p {
                 // background-color: #fff;
@@ -108,7 +109,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                // align-items: center;
 
                 h4 {
                     line-height: 1.5;
@@ -163,7 +164,7 @@
                 font-family: $title;
                 text-transform: capitalize;
                 font-size: clamp(2em, 5vw, 5em);
-                margin: .5em;
+                margin: 1em 0;
             }
 
             .section-line {
@@ -179,6 +180,7 @@
                     border-bottom: $border-width solid $coffee;
                     z-index: -1;
                 }
+
             }
 
             .section-line.swapped {

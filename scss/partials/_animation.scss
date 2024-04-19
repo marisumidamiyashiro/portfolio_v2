@@ -1,0 +1,15 @@
+[data-scroll="scalex"].section-line {
+    --line-scale-x: 0;
+    --line-transform-origin: left;
+
+    &::after {
+        scale: var(--line-scale-x) 1;
+        transform-origin: var(--line-transform-origin);
+        transition: scale 1s ease-in-out;
+    }
+
+
+    &[data-inview] {
+        --line-scale-x: 1;
+    }
+}

@@ -397,8 +397,7 @@ body {
 }
 .casestudy-main img,
 .casestudy-main video {
-  border: 0.25px solid rgba(88, 88, 88, 0.7);
-  box-shadow: 10px 5px 10px rgba(88, 88, 88, 0.7);
+  box-shadow: 5px 5px 5px rgba(88, 88, 88, 0.7);
 }
 .casestudy-main .casestudy-project-overview {
   margin-bottom: 10em;
@@ -469,7 +468,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3em auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 .casestudy-main .casestudy-project-process .casestudy-process p {
   padding-bottom: 0.9em;
@@ -480,7 +480,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .casestudy-main .casestudy-project-process .casestudy-process .body-copy h4 {
   line-height: 1.5;
@@ -523,7 +522,7 @@ body {
   font-family: "the-seasons", sans-serif;
   text-transform: capitalize;
   font-size: clamp(2em, 5vw, 5em);
-  margin: 0.5em;
+  margin: 1em 0;
 }
 .casestudy-main .casestudy-project-process .caption .section-line {
   position: relative;
@@ -930,7 +929,6 @@ h4 {
 
 p {
   max-width: clamp(500px, 25vw, 750px);
-  margin: 0 1em;
 }
 
 .row {
@@ -1197,5 +1195,17 @@ body .gist .gist-file .gist-meta {
 .swiper .swiper-pagination-bullet {
   background-color: #333 !important;
   margin: 1.5em;
-  padding: 0.75em;
+}
+
+[data-scroll=scalex].section-line {
+  --line-scale-x: 0;
+  --line-transform-origin: left;
+}
+[data-scroll=scalex].section-line::after {
+  scale: var(--line-scale-x) 1;
+  transform-origin: var(--line-transform-origin);
+  transition: scale 1s ease-in-out;
+}
+[data-scroll=scalex].section-line[data-inview] {
+  --line-scale-x: 1;
 }
