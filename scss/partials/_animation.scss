@@ -1,10 +1,12 @@
+// SCROLL TRIGGERED ANIMATIONS
+
 [data-scroll="scalex"].section-line {
     --line-scale-x: 0;
     --line-transform-origin: left;
 
-    &::after {
+    &:after {
         scale: var(--line-scale-x) 1;
-        transform-origin: var(--line-transform-origin);
+        transform-origin: left;
         transition: scale 1s ease-in-out;
     }
 

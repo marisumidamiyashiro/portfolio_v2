@@ -16,12 +16,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            // align-items: center;
 
             .casestudy-title {
                 font-family: $title;
                 color: $coffee;
-                margin-top: 1.5em;
+                margin: .5em auto;
                 font-size: clamp(3em, 9vw, 9em);
                 text-align: center;
                 text-transform: none;
@@ -47,10 +47,9 @@
             .casestudy-overview {
                 display: flex;
                 flex: wrap;
-                align-items: center;
-                justify-content: space-between;
+                align-items: start;
                 width: 60%;
-                margin: 5em auto;
+                margin: 0 auto;
 
                 p {
                     font-family: $body;
@@ -65,7 +64,6 @@
                     h3 {
                         font-family: $title;
                         font-size: clamp(1.5em, 2vw, 2em);
-                        margin-top: .5em;
                         text-transform: none;
                     }
 
@@ -89,33 +87,6 @@
             align-items: center;
             margin-top: 3em;
             margin-bottom: 3em;
-
-            p {
-                // background-color: #fff;
-                padding-bottom: .9em;
-                font-family: $body;
-                line-height: 1.5;
-            }
-
-            // .one-whole {
-            //     display: flex;
-            //     justify-content: center;
-            //     align-items: center;
-            // }
-
-            .body-copy {
-                // border: 1px solid #333;
-                // box-shadow: 15px 15px 0 #333;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                // align-items: center;
-
-                h4 {
-                    line-height: 1.5;
-                }
-            }
-
         }
 
         .casestudy-process-images {
@@ -153,7 +124,6 @@
         img {
             max-height: 750px;
             max-width: 100%;
-            margin: 1em;
         }
 
         .caption {
@@ -164,7 +134,7 @@
                 font-family: $title;
                 text-transform: capitalize;
                 font-size: clamp(2em, 5vw, 5em);
-                margin: 1em 0;
+                margin: .5em 0;
             }
 
             .section-line {
@@ -185,6 +155,29 @@
 
             .section-line.swapped {
                 flex-direction: row-reverse;
+            }
+        }
+
+        .design {
+            display: flex;
+            justify-content: center;
+
+            .button {
+                text-align: center;
+                text-decoration: none;
+                padding: 1em 1.5em;
+                margin: .5em;
+                background-color: $coffee;
+                color: $light-pink;
+                transition: all .3s ease-out;
+                height: 50px;
+                width: 150px;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: $light-pink;
+                    color: $coffee;
+                }
             }
         }
     }
@@ -306,6 +299,7 @@
     img {
         border: none;
         box-shadow: none;
+        margin: auto 3em;
     }
 }
 
@@ -607,24 +601,6 @@
         img {
             max-height: 500px;
             margin: .5em;
-        }
-    }
-}
-
-// BUTTONS
-
-.casestudy-process {
-    .button {
-        text-decoration: none;
-        padding: 1em 1.5em;
-        margin: .5em;
-        background-color: $coffee;
-        color: $light-pink;
-        transition: all .3s ease-out;
-
-        &:hover {
-            background-color: $light-pink;
-            color: $coffee;
         }
     }
 }

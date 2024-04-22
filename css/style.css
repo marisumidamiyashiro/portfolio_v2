@@ -406,12 +406,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-title {
   font-family: "the-seasons", sans-serif;
   color: #333;
-  margin-top: 1.5em;
+  margin: 0.5em auto;
   font-size: clamp(3em, 9vw, 9em);
   text-align: center;
   text-transform: none;
@@ -435,10 +434,9 @@ body {
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview {
   display: flex;
   flex: wrap;
-  align-items: center;
-  justify-content: space-between;
+  align-items: start;
   width: 60%;
-  margin: 5em auto;
+  margin: 0 auto;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview p {
   font-family: "apparat-light", sans-serif;
@@ -453,7 +451,6 @@ body {
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-year h3 {
   font-family: "the-seasons", sans-serif;
   font-size: clamp(1.5em, 2vw, 2em);
-  margin-top: 0.5em;
   text-transform: none;
 }
 .casestudy-main .casestudy-project-overview .casestudy-hero .casestudy-overview .casestudy-software span,
@@ -470,19 +467,6 @@ body {
   align-items: center;
   margin-top: 3em;
   margin-bottom: 3em;
-}
-.casestudy-main .casestudy-project-process .casestudy-process p {
-  padding-bottom: 0.9em;
-  font-family: "apparat-light", sans-serif;
-  line-height: 1.5;
-}
-.casestudy-main .casestudy-project-process .casestudy-process .body-copy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.casestudy-main .casestudy-project-process .casestudy-process .body-copy h4 {
-  line-height: 1.5;
 }
 .casestudy-main .casestudy-project-process .casestudy-process-images {
   display: flex;
@@ -512,7 +496,6 @@ body {
 .casestudy-main .casestudy-project-process img {
   max-height: 750px;
   max-width: 100%;
-  margin: 1em;
 }
 .casestudy-main .casestudy-project-process .caption {
   display: flex;
@@ -522,7 +505,7 @@ body {
   font-family: "the-seasons", sans-serif;
   text-transform: capitalize;
   font-size: clamp(2em, 5vw, 5em);
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 .casestudy-main .casestudy-project-process .caption .section-line {
   position: relative;
@@ -539,6 +522,26 @@ body {
 }
 .casestudy-main .casestudy-project-process .caption .section-line.swapped {
   flex-direction: row-reverse;
+}
+.casestudy-main .casestudy-project-process .design {
+  display: flex;
+  justify-content: center;
+}
+.casestudy-main .casestudy-project-process .design .button {
+  text-align: center;
+  text-decoration: none;
+  padding: 1em 1.5em;
+  margin: 0.5em;
+  background-color: #333;
+  color: rgb(255, 214, 214);
+  transition: all 0.3s ease-out;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+}
+.casestudy-main .casestudy-project-process .design .button:hover {
+  background-color: rgb(255, 214, 214);
+  color: #333;
 }
 .casestudy-main .casestudy-more-projects {
   display: flex;
@@ -635,6 +638,7 @@ body {
 .fittree-images img {
   border: none;
   box-shadow: none;
+  margin: auto 3em;
 }
 
 .fittree-button {
@@ -887,19 +891,6 @@ body {
   margin: 0.5em;
 }
 
-.casestudy-process .button {
-  text-decoration: none;
-  padding: 1em 1.5em;
-  margin: 0.5em;
-  background-color: #333;
-  color: rgb(255, 214, 214);
-  transition: all 0.3s ease-out;
-}
-.casestudy-process .button:hover {
-  background-color: rgb(255, 214, 214);
-  color: #333;
-}
-
 h1,
 h2,
 h3,
@@ -929,6 +920,9 @@ h4 {
 
 p {
   max-width: clamp(500px, 25vw, 750px);
+  font-family: "apparat-light", sans-serif;
+  line-height: 1.5;
+  padding-bottom: 0.9em;
 }
 
 .row {
@@ -937,7 +931,6 @@ p {
   margin-left: -1%;
   margin-right: -1%;
   justify-content: center;
-  align-items: center;
   margin-bottom: 3em;
 }
 .row.swapped {
@@ -983,7 +976,6 @@ p {
 }
 
 img {
-  height: clamp(200px, 100%, 400px);
   object-fit: cover;
 }
 
@@ -1201,9 +1193,9 @@ body .gist .gist-file .gist-meta {
   --line-scale-x: 0;
   --line-transform-origin: left;
 }
-[data-scroll=scalex].section-line::after {
+[data-scroll=scalex].section-line:after {
   scale: var(--line-scale-x) 1;
-  transform-origin: var(--line-transform-origin);
+  transform-origin: left;
   transition: scale 1s ease-in-out;
 }
 [data-scroll=scalex].section-line[data-inview] {
